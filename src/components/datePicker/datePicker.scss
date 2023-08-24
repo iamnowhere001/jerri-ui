@@ -1,0 +1,166 @@
+// 连选时，hover色
+$background_color_3: rgba(55, 152, 71, .2);
+
+
+.jr-datePicker {
+  /deep/ .jr-input {
+    .jr-suffix-icon {
+      cursor: pointer;
+    }
+  }
+
+  &.jr-date-disabled {
+    input {
+      cursor: no-drop;
+    }
+
+    i {
+      pointer-events: none;
+    }
+  }
+}
+
+/* 日期选择器修改默认样式 */
+/* // 箭头样式调整 */
+/* // 日期数字颜色 */
+/* // 边框线 */
+/* // 时间日期里面的滚动条 */
+.layui-laydate {
+  margin: 4px 0;
+  border: 0;
+  box-shadow: 0px 1px 6px 0px rgba(39, 85, 116, 0.33);
+
+  .laydate-disabled {
+    color: $--color-c2;
+
+    &:hover {
+      color: $--color-c2;
+    }
+  }
+
+  .layui-this {
+    background-color: $--color-c8 !important;
+    border-radius: $--border-radius-base;
+  }
+
+  .layui-this.laydate-disabled {
+    background-color: $--color-c1 !important;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+}
+
+// 头部
+.layui-laydate-header {
+  i.laydate-next-y {
+    display: none;
+  }
+
+  i.laydate-prev-y {
+    display: none;
+  }
+
+  i.laydate-prev-m {
+    left: 10px;
+  }
+
+  i.laydate-next-m {
+    right: 10px;
+  }
+
+  i {
+    &:hover {
+      color: $--color-c8;
+    }
+
+    color: $--color-c3;
+  }
+
+  span {
+    &:hover {
+      color: $--color-c8;
+    }
+  }
+}
+
+// 日期部分
+.layui-laydate-content {
+  td {
+    color: $--color-c1;
+  }
+
+  .laydate-day-prev {
+    color: $--color-c2;
+  }
+
+  .laydate-day-next {
+    color: $--color-c2;
+  }
+
+  th {
+    color: $--color-c2;
+  }
+}
+
+// 底部按钮
+.laydate-footer-btns {
+  span {
+    color: $--color-c13;
+    border: 0;
+    font-size: 14px;
+  }
+
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.laydate-set-ym {
+  >span {
+    color: $--color-c13;
+  }
+}
+
+.layui-laydate-hint {
+  border: 0;
+  box-shadow: 0px 1px 6px 0px rgba(39, 85, 116, 0.33);
+}
+
+.layui-laydate-footer {
+  height: 40px;
+
+  span {
+    &:hover {
+      color: $--color-c8;
+    }
+  }
+}
+
+.laydate-btns-time {
+  position: absolute;
+  top: 6px;
+  left: 20px;
+}
+
+// 只有时分时，样式
+.laydate-time-list {
+  .hhmm {
+    ol {
+      li {
+        padding-left: 52px;
+      }
+    }
+  }
+}
+
+// 连选
+.laydate-selected {
+  &:hover {
+    background-color: $background_color_3 !important;
+  }
+}

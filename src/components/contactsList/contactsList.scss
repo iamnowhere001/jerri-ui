@@ -1,0 +1,913 @@
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 以上均为公共样式
+
+.main-box {
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+.ps-left {
+  width: 600px;
+
+  .filter-box {
+    height: 36px;
+    background-color: #fff;
+    border: 1px solid $--color-c3;
+    border-radius: $--border-radius-base $--border-radius-base 0px 0px;
+
+    input {
+      width: 100%;
+      padding-left: 10px;
+      height: 34px;
+      border: 1px solid #ffffff;
+      border-radius: $--border-radius-base;
+      line-height: 36px;
+      outline: none;
+      font-size: 13px;
+    }
+
+    .search-type {
+      float: left;
+      position: relative;
+
+      p {
+        cursor: pointer;
+        margin: 1px 5px 0 20px;
+        position: relative;
+        width: 80px;
+        text-align: left;
+
+        span {
+          font-size: 13px;
+          white-space: nowrap;
+          font-weight: bold;
+        }
+
+        &:after {
+          content: " ";
+          position: absolute;
+          top: 2px;
+          right: 0px;
+          width: 1px;
+          background: #999;
+          height: 15px;
+        }
+
+        ul {
+          box-shadow: 0px 1px 5px 0px #8293b0;
+          background: #fff;
+          padding: 4px 0;
+          position: absolute;
+          top: 31px;
+          left: -19px;
+          width: 92px;
+          z-index: 2;
+          li {
+            text-align: center;
+            height: 36px;
+            line-height: 36px;
+            font-size: 13px;
+            &:hover {
+              background: $--color-c10;
+            }
+          }
+        }
+      }
+      .icon-triangle {
+        position: absolute;
+        right: 0;
+        top: 8px;
+        font-size: 25px;
+        height: 5px;
+        width: 5px;
+        top: 8px;
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        border-style: solid;
+        border-width: 3px 3px 0 3px;
+        border-color: #000 transparent transparent transparent;
+        margin-right: 14px;
+        &.open {
+          border-width: 3px 0px 3px 3px;
+          border-color: transparent transparent transparent #000;
+        }
+      }
+    }
+  }
+
+  .main-list {
+    margin-top: -1px;
+  }
+
+  .user-choose-area {
+    width: 100%;
+    height: 425px;
+    background-color: #fff;
+    border: 1px solid $--color-c3;
+    border-radius: 0px 0px $--border-radius-base $--border-radius-base;
+    box-sizing: border-box;
+    align-items: flex-start;
+    position: relative;
+
+    .department,
+    .group {
+      flex: 1;
+      padding: 10px 0;
+      max-height: 422px;
+      overflow-y: auto;
+      box-sizing: border-box;
+      dt {
+        font-size: 14px;
+        padding: 0 10px 0 10px;
+        height: 36px;
+        line-height: 36px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+      }
+      dd {
+        height: 36px;
+        line-height: 36px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0 10px 0 40px;
+        position: relative;
+        text-align: left;
+        font-size: 14px;
+      }
+    }
+    .department {
+
+      .icon {
+        font-size: 21px;
+        position: relative;
+        top: 8px;
+        color: #000;
+        transition: 0.3s;
+        float: left;
+        &.folder {
+          transform: rotate(-90deg);
+          top: 6px;
+          left: 3px;
+        }
+      }
+      dd {
+        &:hover {
+          background-color: $--color-c14;
+          color: #000;
+          cursor: pointer;
+        }
+        &.active {
+          background-color: $--color-c10;
+          font-weight: bold;
+        }
+      }
+    }
+    .group {
+      dd {
+        cursor: pointer;
+        &.active {
+          background-color: $--color-c10;
+        }
+        &:hover {
+          background-color: $--color-c14;
+
+          .icon-wrong-warning {
+            display: inline-block !important;
+          }
+        }
+        span {
+          margin-left: 10px;
+          color: #999;
+          max-width: 106px;
+          cursor: pointer;
+          &.name {
+            color: #000;
+            margin-left: 0;
+          }
+        }
+        label {
+          cursor: pointer;
+          padding-right: 26px;
+          position: relative;
+
+          .icon {
+            position: absolute;
+            right: 0;
+            top: 6px;
+            font-size: 25px;
+
+            &.icon-right-warning {
+              color: $--color-c9;
+              top: 6px;
+            }
+
+            &.icon-wrong-warning {
+              display: none;
+              transform: rotate(45deg);
+              color: $--color-c9;
+            }
+          }
+        }
+      }
+      dt {
+        font-weight: 600;
+        cursor: default;
+        text-align: left;
+
+        .point {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #000;
+          float: left;
+          position: relative;
+          top: 15px;
+          margin: 0px 10px;
+        }
+      }
+      .people {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        max-width: 249px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 299px;
+      width: 1px;
+      height: 425px;
+      border-left: 1px solid rgb(222, 228, 236);
+      border-left-width: 1px;
+      border-left-style: solid;
+      border-left-color: rgb(222, 228, 236);
+    }
+  }
+
+  .org-choose-area {
+    width: 100%;
+    height: 425px;
+    background-color: #fff;
+    border: 1px solid $--color-c3;
+    border-radius: 0px 0px $--border-radius-base $--border-radius-base;
+    box-sizing: border-box;
+    align-items: flex-start;
+    position: relative;
+
+    .department {
+      flex: 1;
+      padding: 10px 0;
+      max-height: 422px;
+      overflow-y: auto;
+      box-sizing: border-box;
+
+      .icon-sort-up {
+        font-size: 21px;
+        position: relative;
+        top: 8px;
+        color: #000;
+        transition: 0.3s;
+        float: left;
+        &.folder {
+          transform: rotate(-90deg);
+          top: 6px;
+          left: 3px;
+        }
+      }
+      dt:hover, dd:hover {
+        .icon-wrong-warning {
+          display: inline-block !important;
+        }
+      }
+      .icon-wrong-warning {
+        display: none;
+        font-size: 25px;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        transform: rotate(45deg);
+        color: $--color-c9;
+      }
+
+      dt {
+        font-size: 14px;
+        padding: 0 10px 0 20px;
+        height: 36px;
+        line-height: 36px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+      }
+      dd {
+        line-height: 36px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0 10px 0 40px;
+        position: relative;
+        text-align: left;
+        font-size: 14px;
+
+        &:hover {
+          background-color: $--color-c14;
+          color: #000;
+          cursor: pointer;
+        }
+        &.active {
+          background-color: $--color-c10;
+          font-weight: bold;
+        }
+      }
+      .team {
+        dd {
+          padding: 0 10px 0 80px;
+        }
+      }
+    }
+  }
+
+  .position-choose-area {
+    width: 100%;
+    height: 425px;
+    background-color: #fff;
+    border: 1px solid $--color-c3;
+    border-radius: 0px 0px $--border-radius-base $--border-radius-base;
+    box-sizing: border-box;
+    align-items: flex-start;
+    position: relative;
+
+    .department {
+      flex: 1;
+      padding: 10px 0;
+      max-height: 422px;
+      overflow-y: auto;
+      box-sizing: border-box;
+      dt {
+        font-size: 14px;
+        padding: 0 10px 0 10px;
+        height: 36px;
+        line-height: 36px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+      }
+      dd {
+        height: 36px;
+        line-height: 36px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0 10px 0 40px;
+        position: relative;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      .icon {
+        font-size: 21px;
+        position: relative;
+        top: 8px;
+        color: #000;
+        transition: 0.3s;
+        float: left;
+        &.folder {
+          transform: rotate(-90deg);
+          top: 6px;
+          left: 3px;
+        }
+      }
+      dd {
+        &:hover {
+          background-color: $--color-c14;
+          color: #000;
+          cursor: pointer;
+        }
+        &.active {
+          background-color: $--color-c10;
+          font-weight: bold;
+        }
+      }
+    }
+    .cascade-group {
+      flex: 1;
+      padding: 10px 0;
+      max-height: 422px;
+      overflow-y: auto;
+      box-sizing: border-box;
+      dt {
+        font-size: 14px;
+        padding: 0 10px 0 10px;
+        height: 36px;
+        line-height: 36px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+        font-weight: 600;
+        cursor: default;
+
+        .point {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #000;
+          float: left;
+          position: relative;
+          top: 15px;
+          margin: 0px 10px;
+        }
+      }
+      dd {
+        height: 36px;
+        line-height: 36px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0 10px 0 40px;
+        position: relative;
+        text-align: left;
+        font-size: 14px;
+
+        cursor: pointer;
+        &.active {
+          background-color: $--color-c10;
+        }
+        &:hover {
+          background-color: $--color-c14;
+
+          .icon-wrong-warning {
+            display: inline-block !important;
+          }
+        }
+        span {
+          margin-left: 10px;
+          color: #999;
+          max-width: 106px;
+          cursor: pointer;
+          &.name {
+            color: #000;
+            margin-left: 0;
+          }
+        }
+        label {
+          cursor: pointer;
+          padding-right: 26px;
+
+          .icon {
+            position: absolute;
+            right: 0;
+            top: 6px;
+            font-size: 25px;
+
+            &.icon-right-warning {
+              color: $--color-c9;
+              top: 6px;
+            }
+
+            &.icon-wrong-warning {
+              display: none;
+              transform: rotate(45deg);
+              color: $--color-c9;
+            }
+          }
+        }
+      }
+    }
+
+    .group {
+      flex: 1;
+      padding: 10px 0;
+      max-height: 422px;
+      overflow-y: auto;
+      box-sizing: border-box;
+
+      .icon {
+        position: absolute;
+        right: 0;
+        top: 6px;
+        font-size: 25px;
+
+        &.icon-right-warning {
+          color: $--color-c9;
+          right: 7px;
+          top: 6px;
+        }
+
+        &.icon-wrong-warning {
+          display: none;
+          transform: rotate(45deg);
+          color: $--color-c9;
+        }
+      }
+
+      dt {
+        font-size: 14px;
+        padding: 0 10px 0 20px;
+        height: 36px;
+        line-height: 36px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+
+        cursor: pointer;
+        &.active {
+          background-color: $--color-c10 !important;
+          font-weight: bold;
+        }
+        &:hover {
+          background-color: $--color-c14;
+
+          .icon-wrong-warning {
+            display: inline-block !important;
+          }
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      left: 299px;
+      width: 1px;
+      height: 425px;
+      border-left: 1px solid rgb(222, 228, 236);
+      border-left-width: 1px;
+      border-left-style: solid;
+      border-left-color: rgb(222, 228, 236);
+    }
+  }
+
+  .user-search-choose {
+    width: 100%;
+    height: 425px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid $--color-c3;
+    border-radius: 0px 0px $--border-radius-base $--border-radius-base;
+    padding: 10px 0;
+    overflow-y: auto;
+    .none {
+      width: 100%;
+      height: 100%;
+      background: url("../../assets/images/contactList/address-book-none.png")
+        center center no-repeat;
+    }
+    li {
+      padding: 0 36px 0 10px;
+      height: 36px;
+      line-height: 36px;
+      position: relative;
+      justify-content: flex-start;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #999;
+      cursor: pointer;
+      font-size: 14px;
+      text-align: left;
+      &:hover {
+        background-color: $--color-c14;
+
+        .icon-wrong-warning {
+          display: inline-block !important;
+        }
+      }
+      .icon {
+        position: absolute;
+        right: 8px;
+        top: 6px;
+        font-size: 25px;
+
+        &.icon-right-warning {
+          color: $--color-c9;
+          right: 7px;
+          top: 6px;
+        }
+
+        &.icon-wrong-warning {
+          display: none;
+          transform: rotate(45deg);
+          color: $--color-c9;
+        }
+      }
+      span,
+      b,
+      label {
+        color: #999;
+        margin-left: 10px;
+        cursor: pointer;
+        font-weight: 400;
+      }
+      b {
+        color: #000;
+        margin-left: 0;
+      }
+      &.active {
+        background-color: $--color-c14;
+      }
+    }
+  }
+
+  .org-search-choose {
+    width: 100%;
+    height: 425px;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 10px 0;
+    overflow-y: auto;
+    border: 1px solid $--color-c3;
+    border-radius: 0px 0px $--border-radius-base $--border-radius-base;
+    .none {
+      width: 100%;
+      height: 100%;
+      background: url("../../assets/images/contactList/address-book-none.png")
+        center center no-repeat;
+    }
+    li {
+      padding: 0 36px 0 10px;
+      height: 36px;
+      line-height: 36px;
+      position: relative;
+      justify-content: flex-start;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #999;
+      cursor: pointer;
+      font-size: 14px;
+      text-align: left;
+      &:hover {
+        background-color: $--color-c14;
+
+        .icon-wrong-warning {
+          display: inline-block !important;
+        }
+      }
+      .icon {
+        position: absolute;
+        right: 8px;
+        top: 6px;
+        font-size: 25px;
+
+        &.icon-right-warning {
+          color: $--color-c9;
+          right: 7px;
+          top: 6px;
+        }
+
+        &.icon-wrong-warning {
+          display: none;
+          transform: rotate(45deg);
+          color: $--color-c9;
+        }
+      }
+      span,
+      b,
+      label {
+        color: #999;
+        margin-left: 10px;
+        cursor: pointer;
+        font-weight: 400;
+      }
+      b {
+        color: #000;
+        margin-left: 0;
+      }
+      &.active {
+        background-color: $--color-c14;
+      }
+    }
+  }
+
+  .position-search-choose {
+    width: 100%;
+    height: 425px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border: 1px solid $--color-c3;
+    border-radius: 0px 0px $--border-radius-base $--border-radius-base;
+    padding: 10px 0;
+    overflow-y: auto;
+    .none {
+      width: 100%;
+      height: 100%;
+      background: url("../../assets/images/contactList/address-book-none.png")
+        center center no-repeat;
+    }
+    li {
+      padding: 0 36px 0 10px;
+      height: 36px;
+      line-height: 36px;
+      position: relative;
+      justify-content: flex-start;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #999;
+      cursor: pointer;
+      font-size: 14px;
+      text-align: left;
+      &:hover {
+        background-color: $--color-c14;
+
+        .icon-wrong-warning {
+          display: inline-block !important;
+        }
+      }
+      .icon {
+        position: absolute;
+        right: 8px;
+        top: 6px;
+        font-size: 25px;
+
+        &.icon-right-warning {
+          color: $--color-c9;
+          right: 7px;
+          top: 6px;
+        }
+
+        &.icon-wrong-warning {
+          display: none;
+          transform: rotate(45deg);
+          color: $--color-c9;
+        }
+      }
+      span,
+      b,
+      label {
+        color: #999;
+        margin-left: 10px;
+        cursor: pointer;
+        font-weight: 400;
+      }
+      b {
+        color: #000;
+        margin-left: 0;
+      }
+      &.active {
+        background-color: $--color-c14;
+      }
+    }
+  }
+
+  .none {
+    color: #999;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 1;
+  }
+
+}
+
+.ps-right {
+  width: 300px;
+  height: 460px;
+  background: #fff;
+  margin-left: 10px;
+  border: 1px solid $--color-c3;
+  border-radius: $--border-radius-base;
+
+  > h5 {
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 19px;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .department {
+    max-height: 422px;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    dt {
+      font-size: 13px;
+      padding: 0 10px 0 40px;
+      height: 36px;
+      line-height: 36px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      position: relative;
+      cursor: pointer;
+      text-align: left;
+      color: #999;
+
+      .icon {
+        font-size: 21px;
+        position: absolute;
+        left: 14px;
+        top: 8px;
+        color: #999;
+        transition: 0.3s;
+        &.folder {
+          transform: rotate(-90deg);
+          top: 4px;
+          left: 18px;
+        }
+      }
+    }
+
+    dd {
+      height: 36px;
+      line-height: 36px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 0 20px 0 40px;
+      font-size: 14px;
+      position: relative;
+      text-align: left;
+
+      &:hover {
+        background-color: $--color-c14;
+        color: #000;
+        cursor: pointer;
+
+        .icon-prohibit {
+          display: inline-block;
+        }
+      }
+      &.active {
+        background-color: $--color-c10;
+        font-weight: bold;
+      }
+      span.name {
+          color: #000;
+          margin-right: 10px;
+      }
+      span {
+        max-width: 121px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #999;
+        font-size: 14px;
+      }
+      .icon-prohibit {
+        display: none;
+        color: #f55c54;
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        font-size: 25px;
+      }
+    }
+  }
+
+
+  .none {
+    width: 100%;
+    height: 410px;
+    color: #999;
+  }
+
+}
+
+.tools-box {
+  margin-top: 20px;
+  div.success {
+    margin-right: 10px;
+  }
+  .success,
+  .cancel {
+    margin-left: 10px;
+    width: 76px;
+  }
+}

@@ -1,0 +1,43 @@
+//  使用实线边框（即旧边框）
+.table-pro-container.border-solid {
+  border: 1px solid $--color-c3;
+
+  .table__header {
+    th {
+      border-top-width: 0px;
+
+      &:nth-child(1) {
+        border-left-width: 0px;
+      }
+
+      &:last-child {
+        border-right: 0px;
+        border-right-width: 0px;
+      }
+    }
+  }
+
+  .table__body {
+    tr:nth-child(1) {
+      td {
+        border-top-width: 0px;
+      }
+    }
+
+    tr:last-child {
+      td {
+        border-bottom-width: 0px;
+      }
+    }
+
+    td {
+      border: 1px solid $--color-c3;
+      border-left-width: 0px;
+      border-bottom-width: 0px;
+
+      &:last-child {
+        border-right-width: 0px;
+      }
+    }
+  }
+}

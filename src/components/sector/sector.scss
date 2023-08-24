@@ -1,0 +1,60 @@
+.upload {
+  position: relative;
+  display: inline-block;
+}
+
+.circle {
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+svg {
+  background: transparent;
+  border-radius: 50%;
+}
+
+.up-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.up-mask {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  box-sizing: content-box;
+
+  border: 1000px solid rgba(0, 0, 0, 0.5);
+}
+
+.suc {
+  animation: hid 0.5s linear 0.1s forwards;
+}
+
+@keyframes hid {
+  0% {
+    /* width: 30px;
+    height: 30px; */
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+  }
+}

@@ -1,0 +1,123 @@
+.jr-school-content {
+  display: flex;
+
+  padding-top: 20px;
+
+  .school-content-left {
+    width: 65%;
+    margin-right: 20px;
+    background-color: #ffffff;
+
+    .input-box {
+
+      /deep/ .jr-input {
+        >input {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+      }
+    }
+
+    .school-show {
+      border: solid 1px #abc0ba;
+      border-top: 0;
+      height: 438px;
+      overflow: auto;
+    }
+
+  }
+
+  .school-show {
+    padding: 12px 0;
+
+
+    .city-box {
+      margin-bottom: 6px;
+
+
+      .city-title {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        padding-left: 12px;
+
+        >i {
+          font-size: 20px;
+          padding-top: 4px;
+
+          &.rotateI {
+
+            transform: rotateZ(-90deg);
+          }
+        }
+      }
+
+      .city-school-box {
+        >p {
+          position: relative;
+          padding: 0 40px;
+          font-size: 14px;
+          line-height: 34px;
+          cursor: pointer;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+          &:hover {
+            background-color: #eff4ef;
+
+            .common-btn {
+              visibility: visible;
+            }
+          }
+
+          .common-btn {
+            position: absolute;
+            right: 14px;
+            top: 6px;
+            visibility: hidden;
+          }
+        }
+      }
+    }
+  }
+
+  .school-content-right {
+    width: 35%;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: solid 1px #abc0ba;
+    overflow: auto;
+    height: 470px;
+
+    .right-titlex {
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 13px;
+      padding-left: 20px;
+      padding-top: 15px;
+    }
+
+    .school-show {
+      .city-title {
+        color: #999;
+        font-size: 13px;
+      }
+
+      .city-school-box {
+        >p {
+
+          >i {
+            font-size: 24px;
+            color: #7e9e94;
+
+            &:hover {
+              color: #ff5c54;
+            }
+          }
+        }
+      }
+    }
+  }
+}

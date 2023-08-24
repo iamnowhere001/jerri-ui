@@ -1,0 +1,7 @@
+.jr-header {
+  position: relative;
+  padding: 40px 0 20px;
+  text-align: left;
+  color: $--color-c7;
+  @include removeSpace($--font-xl);
+}

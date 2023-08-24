@@ -1,0 +1,91 @@
+/* 颜色变量 几种常见的颜色 参考图片
+-------------------------- */
+// 亮晶晶
+$--color-c0: transparent !default;
+// 黑色
+$--color-c1: #000 !default;
+// 输入框占位字体颜色
+$--color-c2: #999 !default;
+// 分割线/标签描边/滚动条/icon禁用
+$--color-c3: #abc0ba !default;
+// 表头背景
+$--color-c4: #e2e9e7 !default;
+// 内容区域底色
+$--color-c5: #f9fbf9 !default;
+// 白色
+$--color-c6: #fff !default;
+// 菜单栏/各类大标题
+$--color-c7: #003f2d !default;
+// 按钮/图标/字体点亮
+$--color-c8: #067f42 !default;
+// VI色/按钮hover色
+$--color-c9: #1aa849 !default;
+// 下拉条选中/弹窗选中
+$--color-c10: #e3f7e3 !default;
+// 强调/提醒/警示
+$--color-c11: #ff5c54 !default;
+// 强调/提醒
+$--color-c12: #ff8e00 !default;
+// 下拉选项字体颜色
+$--color-c13: #333 !default;
+// 滚动条背景色
+$--color-c14: #eff4ef !default;
+// 弹窗标题背景色
+$--color-c15: #1f6c44 !default;
+// 禁用输入框背景色
+$--color-c16: #f7f9f9 !default;
+// 禁用输入框字体颜色
+$--color-c17: #666 !default;
+// 白色按钮禁用字体颜色 滚动条hover颜色 + -号按钮默认字体颜色
+$--color-c18: #7e9e94 !default;
+// 弹窗关闭icon的hover色
+$--color-c19: #00ff06 !default;
+
+/* 字体大小，以衣服尺码数来区分大小 XXS、XS、S、M、L、XL、XXL、XXXL
+-------------------------- */
+$--font-xxl: 32px !default;
+$--font-xl: 26px !default;
+$--font-l: 24px !default;
+$--font-m: 16px !default;
+$--font-s: 15px !default;
+$--font-xs: 14px !default;
+$--font-xxs: 13px !default;
+$--font-xxxs: 12px !default;
+
+/* 圆角
+-------------------------- */
+$--border-radius-base: 3px !default;
+// ellipse tab圆角
+$--border-radius-tabs: 13px !default;
+// 滚动条
+$--border-radius-scroll: 2px !default;
+
+/* 阴影
+-------------------------- */
+$--box-shadow-base: 0px 1px 10px 0px rgba($--color-c1, 0.2) !default;
+// 按钮阴影
+$--box-shadow-btn: 0px 3px 3px 0px rgba(0, 63, 45, 0.45) !default;
+// 输入框阴影
+$--box-shadow-input: 0 0 0 2px rgba(26, 168, 73, 0.3) !default;
+// tabs阴影
+$--box-shadow-tabs: 0px -1px 1px 0px rgba($--color-c1, 0.06) !default;
+$--box-shadow-ellipse: 0px 2px 6px 0px rgba(38, 50, 56, 0.16) !default;
+
+/* 高度
+-------------------------- */
+// 输入框高度
+$--height-input: 32px !default;
+
+/* 宽度
+-------------------------- */
+// 外框菜单宽度
+$--width-menu: 180px !default;
+
+/* 距离
+-------------------------- */
+// 表单之间默认距离
+$--distance-form: 16px !default;
+
+// 需适配屏幕分辨率
+$--screen-s: 1366px !default;
+$--screen-m: 1600px !default;

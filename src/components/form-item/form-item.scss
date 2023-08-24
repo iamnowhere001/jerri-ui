@@ -1,0 +1,61 @@
+.form-item {
+  display: flex;
+  margin-bottom: $--distance-form;
+  position: relative;
+
+  >label {
+    font-size: $--font-xs;
+    line-height: $--height-input;
+    font-weight: bold;
+
+    // 两端对齐
+    &.text-align-justify {
+      text-align-last: justify
+    }
+
+    &+span {
+      line-height: 32px;
+      display: inline-block;
+      width: 18px;
+    }
+  }
+
+  .label-required {
+    color: $--color-c11;
+    position: absolute;
+    top: 4px;
+    left: -10px;
+  }
+
+}
+
+.form-item-validate {
+  flex: 1;
+  position: relative;
+  line-height: $--height-input;
+  text-align: left;
+}
+
+.message {
+  font-size: $--font-xs;
+  color: $--color-c11;
+  text-align: left;
+  position: absolute;
+  line-height: 18px;
+  position: absolute;
+  background-color: $--color-c6;
+  white-space: nowrap;
+
+  i {
+    font-size: 23px;
+    vertical-align: -5px;
+  }
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}

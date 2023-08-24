@@ -1,0 +1,74 @@
+// 弹性布局居中
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 占位符混入
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+// 消除字体上下间距
+@mixin removeSpace($size) {
+  font-size: $size;
+  line-height: $size;
+}
+
+// 多行文本显示省略号
+@mixin rowHide($row) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $row;
+  cursor: default;
+}
+
+// 单行文本显示省略号
+@mixin ellip {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+// 滚动条混入
+@mixin scroll-bar {
+  ::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+  }
+
+  /*定义滚动条轨道*/
+  ::-webkit-scrollbar-track {
+    background-color: $--color-c14;
+  }
+
+  /*定义滑块*/
+  ::-webkit-scrollbar-thumb {
+    border-radius: $--border-radius-scroll;
+    background-color: $--color-c3;
+
+    &:hover {
+      background-color: $--color-c18;
+    }
+  }
+}
+
+// 媒体查询最大宽度混入
+@mixin less-resolution($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
+}
+
+// 弹性布局垂直居中 水平根据参数对齐 默认靠两端平分
+@mixin flex-justify($align: space-between) {
+  display: flex;
+  justify-content: $align;
+  align-items: center;
+}

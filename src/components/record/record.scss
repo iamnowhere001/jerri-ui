@@ -1,0 +1,74 @@
+.jr-record-wrap {
+  width: 240px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+
+  .jr-record {
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    background-color: $--color-c6;
+    border-radius: 20px;
+    border: solid 2px $--color-c3;
+    padding-left: 44px;
+    display: flex;
+    align-items: center;
+    color: $--color-c8;
+
+    &:hover {
+      border: solid 2px $--color-c9;
+
+      &,
+      i {
+        color: $--color-c9;
+      }
+    }
+
+    &-end {
+      padding-right: 16px;
+      justify-content: flex-end;
+    }
+
+    i {
+      width: 30px;
+      height: 30px;
+      left: 10px;
+      background: no-repeat center center;
+
+      &.inactive {
+        background-image: url('../../assets/images/record/inactive.png');
+      }
+
+      &.recording {
+        background-image: url('../../assets/images/record/recording.gif');
+      }
+
+      &.pause {
+        background-image: url('../../assets/images/record/pause.png');
+      }
+
+      &.play {
+        background-image: url('../../assets/images/record/play.gif');
+      }
+    }
+
+    .stae-desc {
+      line-height: $--font-xs;
+    }
+  }
+
+  i,
+  .remove {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .remove {
+    cursor: pointer;
+    color: $--color-c17;
+    right: 0;
+  }
+
+}

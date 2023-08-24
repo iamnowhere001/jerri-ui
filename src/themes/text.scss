@@ -1,0 +1,66 @@
+// 当行超出出现省略号
+.j-ellip {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 文本居中
+.j-text-center {
+  text-align: center;
+}
+
+// 文本居左
+.j-text-left {
+  text-align: left;
+}
+
+// 文本居右
+.j-text-right {
+  text-align: right;
+}
+
+
+// 换行
+.j-break-all {
+  word-break: break-all;
+}
+
+// 基线对齐方式
+.j-vt {
+  vertical-align: top;
+}
+
+.j-vb {
+  vertical-align: bottom;
+}
+
+.j-vm {
+  vertical-align: middle;
+}
+
+
+// 副标题
+.j-sub-title {
+  font-weight: 600;
+  @include removeSpace($--font-s);
+
+  &::before {
+    margin-right: 10px;
+    content: '\25CF';
+    display: inline-block;
+    vertical-align: initial;
+  }
+}
+
+// 描述文字
+.j-sub-desc {
+  font-size: $--font-xs;
+  color: $--color-c2;
+  font-weight: normal;
+}
+
+// 保留文本格式
+.j-pre-wrap {
+  white-space: pre-wrap;
+}

@@ -1,0 +1,174 @@
+.input-box {
+  position: relative;
+  display: inline-block;
+
+  .show-p {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    margin: 0;
+    padding: 0;
+    background-color: $--color-c6;
+    position: absolute;
+    padding-left: 8px;
+    padding-right: 20px;
+    left: 1px;
+    top: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /deep/ .jr-suffix-icon {
+    top: 3px;
+  }
+}
+
+.add-content {
+  position: relative;
+}
+
+.add-main {
+  margin-top: 11px;
+  position: absolute;
+  z-index: 999;
+  width: 575px;
+  height: 352px;
+  overflow: hidden;
+  background-color: $--color-c6;
+  border-radius: $--border-radius-base;
+  box-shadow: $--box-shadow-base;
+}
+
+.add-area-select {
+  height: 42px;
+  background-color: #f0f4f3;
+  display: flex;
+  border-bottom: 1px solid $--color-c3;
+}
+
+.add-area-select span {
+  cursor: pointer;
+  line-height: 42px;
+  height: 42px;
+  font-size: 14px;
+  width: 114px;
+  padding: 0 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.add-area-select .active {
+  background-color: $--color-c6;
+  font-weight: 700;
+  border-right: 1px solid $--color-c3;
+  border-left: 1px solid $--color-c3;
+}
+
+.add-area-select span:first-child.active {
+  border-left: none;
+}
+
+.add-definite-select {
+  height: 246px;
+  overflow: auto;
+  border-bottom: 1px solid $--color-c3;
+}
+
+.add-definite-content {
+  padding: 24px 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-definite-span {
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 14px;
+  margin-bottom: 8px;
+  line-height: 24px;
+  border-radius: $--border-radius-base;
+}
+
+.add-definite-span:hover,
+.add-province-select span:hover {
+  background-color: #f0f4f3;
+}
+
+.add-definite-span.active,
+.add-province-select span.active {
+  background-color: $--color-c8;
+  color: $--color-c6;
+}
+
+.add-btn-box {
+  display: flex;
+  height: 64px;
+  padding: 0 30px;
+  padding-left: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-address {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.add-address span {
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.add-address input {
+  position: static;
+  outline: none;
+  border: none;
+  height: 46px;
+  width: 370px;
+  padding-left: 7px;
+}
+
+.add-address input::placeholder {
+  color: $--color-c2;
+}
+
+.add-province-content {
+  padding: 24px 30px;
+}
+
+.add-province-div {
+  display: flex;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 2px;
+}
+
+.add-province-div-span {
+  padding-top: 5px;
+  font-family: "Arial";
+  width: 28px;
+  margin-right: 20px;
+  font-weight: 700;
+}
+
+.add-province-select {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add-province-select .key:nth-child(8n) {
+  margin-right: 0;
+}
+
+.add-province-select .mb0 {
+  margin-bottom: 0;
+}
+
+.add-place-chosed {
+  color: $--color-c2;
+}

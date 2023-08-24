@@ -1,0 +1,51 @@
+// 深色边框
+.j-deep-bd {
+  border: 1px solid $--color-c3;
+}
+
+.j-deep-bdt {
+  border-top: 1px solid $--color-c3;
+}
+
+.j-deep-bdb {
+  border-bottom: 1px solid $--color-c3;
+}
+
+.j-deep-bdl {
+  border-left: 1px solid $--color-c3;
+}
+
+.j-deep-bdr {
+  border-right: 1px solid $--color-c3;
+}
+
+// 浅色边框
+.j-shallow-bd {
+  border: 1px solid $--color-c3;
+}
+
+.j-shallow-bdt {
+  border-top: 1px solid $--color-c3;
+}
+
+.j-shallow-bdb {
+  border-bottom: 1px solid $--color-c3;
+}
+
+.j-shallow-bdl {
+  border-left: 1px solid $--color-c3;
+}
+
+.j-shallow-bdr {
+  border-right: 1px solid $--color-c3;
+}
+
+//  要不是你突然闯进我生活——边框
+.j-green-bd {
+  border: 1px solid $--color-c9 !important;
+}
+
+//  要不是你突然闯进我生活——触摸边框
+.j-green-bd-hover:hover {
+  border: 1px solid $--color-c9 !important;
+}

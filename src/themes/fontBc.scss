@@ -1,0 +1,44 @@
+// 正常字体
+.j-ft-normal {
+  color: $--color-c8;
+}
+
+// hover效果字体
+.j-ft-hover {
+  &:hover {
+    color: $--color-c9;
+  }
+}
+
+
+// 警告字体
+.j-ft-warning {
+  color: $--color-c11;
+}
+
+// 灰色字体
+.j-ft-gray {
+  color: $--color-c5;
+}
+
+// 背景色
+.j-bg-normal {
+  background-color: $--color-c8;
+}
+
+// hover主题色背景
+.j-bg-hover {
+  &:hover {
+    background-color: $--color-c9;
+  }
+}
+
+// 警告背景
+.j-bg-warning {
+  background-color: $--color-c11;
+}
+
+// 背景灰色
+.j-bg-gray {
+  background-color: $--color-c5;
+}

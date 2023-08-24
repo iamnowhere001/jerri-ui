@@ -1,0 +1,36 @@
+.star {
+  position: relative;
+
+  &.dis-event {
+    pointer-events: none;
+  }
+
+  .desc {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    margin-left: 14px;
+    width: fit-content;
+    transform: translateY(-50%);
+    font-size: $--font-xs;
+    color: $--color-c17;
+  }
+
+  span {
+    cursor: pointer;
+    font-size: 28px;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    color: #a6acb7;
+
+    &:hover,
+    &.active {
+
+      &::before,
+      &~span::before {
+        color: $--color-c8;
+        content: "\E98D";
+      }
+    }
+  }
+}

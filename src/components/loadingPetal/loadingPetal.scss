@@ -1,0 +1,118 @@
+@keyframes fade {
+  from {
+    background: #067f42;
+  }
+
+  to {
+    background: #d4f8da;
+  }
+}
+
+.load {
+  position: relative;
+  height: 100%;
+}
+
+.container {
+  width: 100px;
+  height: 100px;
+  opacity: 0.8;
+  margin-top: -50px;
+  margin-left: -50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10%;
+}
+
+.top {
+  height: 30%;
+}
+
+.base {
+  height: 30%;
+}
+
+.spinner {
+  height: 40%;
+  width: 40%;
+  position: relative;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+
+  div {
+    width: 7%;
+    height: 20%;
+    background-color: $--color-c6;
+    position: absolute;
+    left: 44.5%;
+    top: 37%;
+    border-radius: 30%;
+    animation: fade 1s linear infinite;
+  }
+
+  div.bar1 {
+    transform: rotate(0deg) translate(0, -142%);
+    animation-delay: 0s;
+  }
+
+  div.bar2 {
+    transform: rotate(30deg) translate(0, -142%);
+    animation-delay: -0.9167s;
+  }
+
+  div.bar3 {
+    transform: rotate(60deg) translate(0, -142%);
+    animation-delay: -0.833s;
+  }
+
+  div.bar4 {
+    transform: rotate(90deg) translate(0, -142%);
+    animation-delay: -0.75s;
+  }
+
+  div.bar5 {
+    transform: rotate(120deg) translate(0, -142%);
+    animation-delay: -0.667s;
+  }
+
+  div.bar6 {
+    transform: rotate(150deg) translate(0, -142%);
+    animation-delay: -0.5833s;
+  }
+
+  div.bar7 {
+    transform: rotate(180deg) translate(0, -142%);
+    animation-delay: -0.5s;
+  }
+
+  div.bar8 {
+    transform: rotate(210deg) translate(0, -142%);
+    animation-delay: -0.41667s;
+  }
+
+  div.bar9 {
+    transform: rotate(240deg) translate(0, -142%);
+    animation-delay: -0.333s;
+  }
+
+  div.bar10 {
+    transform: rotate(270deg) translate(0, -142%);
+    animation-delay: -0.25s;
+  }
+
+  div.bar11 {
+    transform: rotate(300deg) translate(0, -142%);
+    animation-delay: -0.1667s;
+  }
+
+  div.bar12 {
+    transform: rotate(330deg) translate(0, -142%);
+    animation-delay: -0.0833s;
+  }
+}
+
+.hidden {
+  display: none;
+}

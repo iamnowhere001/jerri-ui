@@ -1,0 +1,87 @@
+.j-table-file-upload {
+  .j-fileName-box {
+    display: flex;
+
+    .j-img-box {
+      width: 100%;
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      > span {
+        font-size: 14px;
+      }
+      .gray-span {
+        font-size: 13px;
+        margin-left: 10px;
+        color: #999;
+      }
+    }
+
+    .j-table-progress {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      max-width: 100%;
+      background-color: $--color-c5;
+    }
+  }
+
+  .j-status-box {
+    .j-file-icon {
+      font-size: $--font-l;
+    }
+
+    .icon-right-warning {
+      color: $--color-c8;
+    }
+
+    .icon-save-warning {
+      color: $--color-c11;
+    }
+
+    > span {
+      font-size: $--font-xs;
+
+      &.j-green {
+        color: $--color-c2;
+      }
+    }
+  }
+
+  .j-upload-box {
+    width: 100%;
+    height: 84px;
+    background-color: $--color-c6;
+    border: solid 1px $--color-c3;
+    box-sizing: border-box;
+    border-top: 0;
+    @include center;
+    flex-direction: column;
+
+    // 按钮组件样式
+    /deep/ .jr-button-wrap {
+      margin-bottom: 8px;
+    }
+
+    &:hover {
+      color: $--color-c9;
+
+      /deep/ .jr-button-wrap {
+        .jr-button {
+          background-color: $--color-c9;
+        }
+      }
+    }
+  }
+
+  /deep/ .table__body-wrap {
+    tr {
+      td:nth-child(2) {
+        // padding: 0;
+        position: relative;
+      }
+    }
+  }
+}

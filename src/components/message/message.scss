@@ -1,0 +1,54 @@
+.message {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10001;
+  @include center;
+
+  span {
+    height: 40px;
+    line-height: 40px;
+    user-select: none;
+    color: $--color-c6;
+    font-size: 13px;
+    background-color: rgba($--color-c1, 0.6);
+    position: fixed;
+    border-radius: 20px;
+    padding: 0 20px;
+    z-index: 50;
+  }
+
+  .normal {
+    color: $--color-c6;
+  }
+
+  .dange {
+    background-color: $--color-c11;
+  }
+
+  .warn {
+    background-color: $--color-c12;
+  }
+
+  .top {
+    top: 30px;
+  }
+}
+
+.fade-enter-active {
+  transition: opacity 0.5s;
+}
+
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-leave-to {
+  opacity: 0;
+}

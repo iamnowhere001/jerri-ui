@@ -1,0 +1,310 @@
+.jr-file-preview {
+  padding: 10px 50px;
+  &.full-page {
+    padding: 0;
+    .file-preview-content {
+      height: calc(100% - 40px);
+    }
+  }
+
+  // 预览容器
+  .file-preview {
+    background-color: $--color-c6;
+    box-shadow: 0px 3px 18px 0px rgba(0, 0, 0, 0.4);
+    border-radius: $--border-radius-base;
+    overflow: hidden;
+
+    // 头部开始
+    &-title {
+      height: 30px;
+      background-color: $--color-c15;
+      padding: 0 10px 0 15px;
+      font-size: $--font-xxs;
+      color: $--color-c6;
+      @include flex-justify;
+    }
+    &-name {
+      flex: 1;
+      margin-right: 40px;
+    }
+    &-icons {
+      display: flex;
+      .icon-maximize_file {
+        transform: translateX(-6px);
+      }
+      i {
+        cursor: pointer;
+        font-size: 24px;
+        &:hover {
+          color: $--color-c19;
+        }
+      }
+    }
+
+    // 内容
+    &-content {
+      position: relative;
+      overflow: hidden;
+      height: calc(100% - 70px);
+      background-color: #f4f6f4;
+      img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    // 展示区域
+    &-display {
+      transition: 0.3s;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+      @include center;
+      &-samll {
+        height: calc(100% - 60px);
+      }
+      /deep/.load {
+        position: absolute;
+        width: 100%;
+        z-index: 20;
+        background-color: $--color-c6;
+      }
+      &:hover {
+        .file-preview-arrow {
+          display: block;
+        }
+      }
+    }
+
+    // 图片盒子
+    &-img-box {
+      transform-origin: top left;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      @include center;
+      // 图片类型展示图
+      > img {
+        user-select: none;
+        position: absolute !important;
+      }
+    }
+
+    // 视频盒子
+    &-video-box {
+      @include center;
+      position: relative;
+      z-index: 18;
+      width: 100%;
+      height: 100%;
+      /deep/.player-box {
+        max-width: 100%;
+        max-height: 100%;
+        .load {
+          background-color: #f4f6f4;
+        }
+      }
+    }
+
+    // 音频盒子
+    &-audio {
+      padding-top: 15px;
+      i {
+        cursor: pointer;
+        margin: 0 auto;
+        width: 38px;
+        height: 38px;
+        display: block;
+        background: url("../../assets/images/filePreview/audio-status.png")
+          no-repeat;
+        &.stop {
+          background-position-x: -38px;
+        }
+      }
+    }
+    // 消息提示
+    &-msg {
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: fit-content;
+      height: 40px;
+      line-height: 40px;
+      user-select: none;
+      color: $--color-c6;
+      font-size: 13px;
+      background-color: rgba($--color-c1, 0.6);
+      border-radius: 20px;
+      padding: 0 20px;
+      z-index: 50;
+    }
+
+    // 其他文件类型展示图
+    &-other {
+      img {
+        margin: 0 auto;
+        cursor: pointer;
+      }
+      &-name {
+        padding: 20px 100px 0;
+        text-align: center;
+      }
+    }
+
+    // 箭头
+    &-arrow {
+      display: none;
+      cursor: pointer;
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 19;
+      background: url("../../assets/images/filePreview/preview-arrow.png")
+        no-repeat;
+      &.disabled {
+        cursor: auto !important;
+      }
+      &-next {
+        background-position: -51px -1px;
+        right: 10px;
+        &:hover {
+          background-position: -51px -51px;
+        }
+        &.disabled {
+          background-position: -51px -101px;
+        }
+      }
+      &-prev {
+        background-position: -1px -1px;
+        left: 10px;
+        &:hover {
+          background-position: -1px -52px;
+        }
+        &.disabled {
+          background-position: -1px -101px;
+        }
+      }
+    }
+
+    // 缩略图列表
+    &-thumb-wrap {
+      transition: 0.3s;
+      position: relative;
+      height: 60px;
+      overflow: hidden;
+      &.small-height {
+        height: 0;
+      }
+    }
+    &-thumb-content {
+      height: 100%;
+      padding: 10px 0;
+      margin: 0 45px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      text-align: center;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      ul {
+        overflow: hidden;
+        margin-top: 10px;
+        display: inline-block;
+        white-space: nowrap;
+        height: 40px;
+        li {
+          position: relative;
+          display: inline-block;
+          user-select: none;
+          cursor: pointer;
+          width: 40px;
+          height: 100%;
+          opacity: 0.5;
+          &:not(:last-child) {
+            margin-right: 1px;
+          }
+          &.active {
+            opacity: 1;
+            border: solid 2px $--color-c9;
+          }
+          .small-img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            @include center;
+          }
+        }
+      }
+    }
+
+    // 缩略图箭头
+    &-thumb-arrow {
+      user-select: none;
+      cursor: pointer;
+      font-size: 44px;
+      position: absolute;
+      top: 50%;
+      color: $--color-c3;
+      &:hover {
+        color: $--color-c8;
+      }
+      &.prev {
+        left: 10px;
+        transform: translateY(-50%) rotate(180deg);
+      }
+      &.next {
+        right: 10px;
+        transform: translateY(-50%);
+      }
+      &.disabled {
+        color: $--color-c4;
+        cursor: auto !important;
+        pointer-events: none;
+      }
+    }
+
+    // 选项卡
+    &-options {
+      height: 40px;
+      padding: 0 20px;
+      color: #595959;
+      @include flex-justify;
+      i {
+        cursor: pointer;
+        font-size: 23px;
+        &:hover {
+          color: $--color-c9;
+        }
+      }
+      .icon-preview_file {
+        width: 30px;
+        font-size: 24px;
+      }
+    }
+    &-tool {
+      i {
+        margin: 0 12px;
+      }
+    }
+    &-page {
+      font-size: 13px;
+      user-select: none;
+      &-curr {
+        color: $--color-c1;
+        margin-right: 3px;
+      }
+      &-total {
+        margin-left: 3px;
+      }
+    }
+  }
+}

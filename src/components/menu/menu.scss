@@ -1,0 +1,76 @@
+.jr-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: $--color-c5;
+  box-shadow: 0px 1px 6px 0px rgba($--color-c1, 0.2);
+  opacity: 0.96;
+  width: 230px;
+  height: 100%;
+  padding: 48px 0 30px;
+  overflow-y: auto;
+  &-add,
+  &-input {
+    display: block;
+    padding: 0 20px;
+  }
+  &-title {
+    padding: 20px 20px 15px;
+    display: block;
+    font-size: 15px;
+    line-height: 15px;
+  }
+  &-list {
+    padding-top: 20px;
+    &-title {
+      user-select: none;
+      padding: 0 20px 5px;
+      position: relative;
+      cursor: pointer;
+      font-weight: 600;
+      i {
+        position: absolute;
+        left: 7px;
+        top: 5px;
+        font-size: 13px;
+        transition: 0.3s;
+        &.rotate {
+          transform: translate(2px, -2px) rotate(-90deg);
+        }
+      }
+      .count {
+        margin-left: 5px;
+        font-weight: normal;
+      }
+    }
+    ul {
+      font-size: 13px;
+      li {
+        position: relative;
+        padding: 0 74px 0 20px;
+        cursor: pointer;
+        height: 34px;
+        line-height: 34px;
+        @include ellip;
+        &:hover {
+          background-color: $--color-c10;
+          > div {
+            display: block;
+          }
+        }
+      }
+    }
+    &-icons {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 74px;
+      i {
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

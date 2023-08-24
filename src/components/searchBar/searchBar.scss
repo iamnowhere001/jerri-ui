@@ -1,0 +1,161 @@
+.jr-search-container {
+  padding-bottom: $--distance-form;
+}
+
+.advanced-query {
+  position: relative;
+
+  // 多行查询的时候才有动画
+  &.search-advabce {
+    transition: all 0.3s;
+    padding-top: 2px;
+    max-height: $--height-input + $--distance-form;
+
+    &.advanced-hidden {
+      overflow: hidden;
+      max-height: $--height-input + $--distance-form;
+    }
+
+    &.advanced-show {
+      max-height: 300px;
+    }
+  }
+
+  &.hide-query {
+    .jr-search-bar {
+      > div {
+        &:last-of-type {
+          .search-item {
+            margin-right: 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.jr-search-bar {
+  display: flex;
+  font-size: 0;
+  &.search-bar-responsive {
+    width: calc(100% + 40px);
+  }
+
+  & > div {
+    height: $--height-input;
+
+    &.advabce {
+      margin-bottom: $--distance-form;
+    }
+  }
+
+  .search-item {
+    display: flex;
+    line-height: $--height-input;
+    height: 100%;
+    width: auto;
+    font-size: $--font-xs;
+    font-weight: bold;
+
+    & > span {
+      white-space: nowrap;
+      font-weight: bold;
+      .label-text {
+        display: inline-block;
+        &.text-align-justify {
+          text-align-last: justify;
+        }
+      }
+    }
+
+    & > i {
+      font-size: $--font-xs;
+    }
+  }
+
+  .date-picker {
+    /deep/ .jr-datePicker {
+      flex: 1;
+    }
+
+    i {
+      min-width: 30px;
+      font-weight: normal;
+      font-style: normal;
+      text-align: center;
+    }
+  }
+
+  .search-button {
+    margin-left: -20px;
+  }
+
+  .no-inter-bank {
+    position: absolute;
+    right: 0;
+    bottom: 11px;
+    align-items: center;
+
+    .no-bank-btn {
+      margin-left: 10px;
+    }
+  }
+}
+
+.btns-condition,
+.btns-query {
+  display: flex;
+}
+
+.btns-condition {
+  justify-content: space-between;
+
+  .btns-export {
+    &:hover {
+      i {
+        color: $--color-c9;
+      }
+    }
+
+    i {
+      font-size: $--font-l;
+      color: $--color-c8;
+      vertical-align: -5px;
+      margin-right: 1px;
+    }
+  }
+
+  .btns-query {
+    .fold-bar {
+      display: flex;
+      align-items: center;
+      font-size: $--font-xs;
+      cursor: pointer;
+
+      &:hover {
+        color: $--color-c9;
+
+        i {
+          color: $--color-c9;
+        }
+      }
+
+      i {
+        font-weight: bold;
+        text-align: center;
+        color: $--color-c17;
+        display: inline-block;
+        margin-left: 2px;
+        transition: all 0.3s;
+
+        &.reverse {
+          transform: rotate(270deg);
+        }
+
+        &.normal {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}

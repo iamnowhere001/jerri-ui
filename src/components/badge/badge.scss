@@ -1,0 +1,101 @@
+$font_family_arial: arial;
+
+// 定义角标效果-谈入谈出
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.3;
+  }
+}
+
+// 定义角标效果-扩散
+@keyframes diffusion {
+  from {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.badge-wrap {
+  position: relative;
+  display: inline-block;
+
+  /** 角标有内容 - start **/
+  .badge {
+    position: absolute;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 12px;
+    height: 18px;
+    line-height: 14px;
+    padding: 0 5px;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid $--color-c6;
+    top: 0px;
+    right: 0px;
+    transform: translate(50%, -50%);
+    color: $--color-c6;
+    line-height: 16px;
+    font-family: $font_family_arial;
+    /** 角标有内容 - end **/
+
+    &.danger {
+      background-color: $--color-c11;
+    }
+
+    &.warn {
+      background-color: $--color-c12;
+    }
+
+    &.success {
+      background-color: $--color-c8;
+    }
+
+    /** 角标为原点 - start **/
+    &.dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      padding: 0;
+      color: $--color-c11;
+    }
+
+    /** 角标为原点 - end **/
+
+    span {
+      color: $--color-c6;
+      font-size: 12px;
+      font-family: $font_family_arial;
+    }
+  }
+}
+
+//  角标效果-扩散
+.diffusion {
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $--color-c0;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    margin: -1px;
+    animation: diffusion 1s ease infinite;
+  }
+}
+
+//  角标效果-淡入淡出
+.fade {
+  animation: fade 0.7s ease infinite alternate;
+}

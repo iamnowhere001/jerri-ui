@@ -1,0 +1,261 @@
+.jr-button-wrap {
+  display: inline-block;
+  cursor: pointer;
+  font-size: $--font-xs;
+  vertical-align: middle;
+  user-select: none;
+
+  .jr-button {
+    min-width: 80px;
+    padding: 0 12px;
+    border-radius: $--border-radius-base;
+    @include center;
+    @include removeSpace($--font-xs);
+
+
+    // 文字比较多的时候左右pd设置10
+    &.less-padding {
+      padding: 0 10px;
+    }
+
+
+    // 按钮大小
+    &.small {
+      height: 32px;
+    }
+
+    &.normal {
+      min-width: 90px;
+      height: 36px;
+      box-shadow: $--box-shadow-btn;
+      @include removeSpace($--font-m);
+    }
+
+
+    // 禁用按钮
+    &-disabled {
+      opacity: .5;
+      cursor: no-drop;
+
+      // 绿色按钮
+      &.jr-button-success {
+        color: $--color-c6 !important;
+        background-color: $--color-c8 !important;
+      }
+
+      // 白色按钮
+      &.jr-button-plain {
+        background-color: $--color-c6 !important;
+        color: $--color-c18 !important;
+        border: solid 1px $--color-c3 !important;
+      }
+
+      // 红色按钮
+      &.jr-button-danger {
+        color: $--color-c11 !important;
+        border: solid 1px $--color-c3 !important;
+      }
+
+      // 删除按钮
+      &.jr-button-delete {
+        background-color: rgba($--color-c4, .5) !important;
+
+        i {
+          color: $--color-c18 !important;
+        }
+      }
+
+      // +号按钮
+      &.jr-button-add {
+        .jr-button-text {
+          color: $--color-c18 !important;
+        }
+
+        // 圆形+号按钮
+        &.circle {
+          background-color: $--color-c8 !important;
+          border: solid 1px $--color-c8 !important;
+
+          .jr-button-text {
+            color: $--color-c6 !important;
+          }
+
+        }
+      }
+
+      // -号按钮
+      &.jr-button-sub {
+        .jr-button-text {
+          background-color: $--color-c18 !important;
+        }
+      }
+    }
+
+    // 成功按钮
+    &-success {
+      color: $--color-c6;
+      background-color: $--color-c8;
+
+      &:hover {
+        background-color: $--color-c9;
+      }
+    }
+
+    // 白色按钮
+    &-plain {
+      border: 1px solid $--color-c3;
+      background-color: $--color-c6;
+      color: $--color-c1;
+
+      // 前置icon按钮
+      .j-icon {
+        margin-left: -6px;
+      }
+
+      &:hover {
+        border: solid 1px $--color-c9;
+        color: $--color-c8;
+        background-color: $--color-c6;
+
+        .j-icon {
+          color: $--color-c9;
+        }
+      }
+    }
+
+
+    // 警告按钮
+    &-danger {
+      border: solid 1px $--color-c3;
+      background-color: $--color-c6;
+      color: $--color-c11;
+
+      &:hover {
+        border: solid 1px $--color-c11;
+      }
+    }
+
+    // 删除按钮
+    &-delete {
+      padding: 0 10px 0 15px;
+      height: 28px !important;
+      background-color: rgba($--color-c4, .5);
+      border-radius: $--border-radius-tabs;
+      line-height: $--font-xs;
+      color: $--color-c13;
+
+      &:hover {
+        background-color: rgba($--color-c4, 1);
+      }
+
+      i {
+        font-size: $--font-l;
+        color: $--color-c18;
+
+        &:hover {
+          color: $--color-c11;
+        }
+      }
+    }
+
+    // 默认插槽容器样式
+    &-img {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 14px;
+        height: 14px;
+        margin-right: 7px;
+      }
+    }
+
+
+    // +号按钮默认宽高为正方形，隐藏图片
+    &-add,
+    &-sub {
+      min-width: auto !important;
+      padding: 0;
+      height: 32px;
+      width: 32px;
+
+      .default-img {
+        display: none;
+      }
+
+
+    }
+
+    &-add {
+      .jr-button-text {
+        padding-bottom: 2px;
+        @include removeSpace($--font-xl);
+        color: $--color-c18;
+      }
+
+      &:hover {
+        .jr-button-text {
+          color: $--color-c9;
+        }
+      }
+
+      // 圆形按钮
+      &.circle {
+        border-radius: 50%;
+        background-color: $--color-c8;
+        border: 0;
+
+        &:hover {
+          background-color: $--color-c9;
+        }
+
+        .jr-button-text {
+          color: $--color-c6;
+        }
+
+        // 小的
+        &.small {
+          width: 22px;
+          height: 22px;
+
+          .jr-button-text {
+            @include removeSpace(21px);
+            padding-bottom: 5px;
+          }
+        }
+
+        // 大的
+        &.normal {
+          width: 28px;
+          height: 28px;
+          box-shadow: none;
+
+          .jr-button-text {
+            @include removeSpace($--font-l);
+          }
+        }
+      }
+    }
+
+    &-sub {
+      .jr-button-text {
+        margin-top: 2px;
+        width: 12px;
+        height: 2px;
+        background-color: $--color-c18;
+      }
+
+      &:hover {
+        border: solid 1px $--color-c11;
+
+        .jr-button-text {
+          background-color: $--color-c11;
+        }
+      }
+    }
+  }
+
+
+
+
+}

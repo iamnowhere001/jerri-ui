@@ -1,0 +1,153 @@
+.jr-upload-file-pro {
+  width: 100%;
+  padding: 20px 0 4px;
+
+  // 删除icon
+  .jr-file-del-icon {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background-color: $--color-c3;
+    border-radius: 100%;
+    z-index: 3;
+    @include center;
+
+    &:hover {
+      background-color: $--color-c11;
+    }
+
+    i {
+      color: $--color-c6;
+    }
+  }
+  .jr-upload-err-tips {
+    cursor: pointer;
+    color: $--color-c11;
+  }
+
+  .jr-batch-download {
+    margin-bottom: 16px;
+    cursor: pointer;
+    color: $--color-c8;
+    &:hover {
+      color: $--color-c9;
+    }
+  }
+
+  // 上排序文件
+  .up-sort-files {
+    padding-bottom: 20px;
+    li {
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+    &-box {
+      line-height: normal;
+      position: relative;
+      display: flex;
+      align-items: center;
+      img {
+        width: 16px;
+        margin-right: 8px;
+      }
+      .jr-file-name {
+        user-select: none;
+        cursor: pointer;
+        &:hover {
+          color: $--color-c8;
+        }
+      }
+      .jr-file-del-icon {
+        flex: 0 0 16px;
+      }
+      .jr-file-del-icon,
+      .jr-upload-err-tips {
+        margin-left: 8px;
+      }
+      .progress-bar {
+        position: absolute;
+        background-color: $--color-c4;
+        border-radius: 1px;
+        width: 250px;
+        min-width: 200px;
+        height: 2px;
+        bottom: -4px;
+        left: 22px;
+        .progress-bar-in {
+          height: 100%;
+          background-color: $--color-c9;
+        }
+      }
+    }
+    .file-del {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
+  }
+
+  // 下排序文件
+  .down-sort-files {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      background-color: $--color-c6;
+      border-radius: $--border-radius-base;
+      border: solid 1px $--color-c3;
+      cursor: pointer;
+      position: relative;
+      margin-bottom: 16px;
+
+      &:not(.last-bank) {
+        margin-right: 14px;
+      }
+
+      .j-img-box,
+      .upload,
+      .j-video-mask,
+      .jr-upload-err {
+        width: 100%;
+        height: 100%;
+      }
+
+      .upload,
+      .j-video-mask,
+      .jr-upload-err {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .jr-upload-err {
+        @include center;
+        background-color: rgba($--color-c6, 0.6);
+      }
+    }
+
+    .jr-input-btn {
+      @include center;
+      border-style: dashed;
+
+      i {
+        font-size: 23px;
+        color: $--color-c18;
+      }
+
+      &:hover {
+        border-color: $--color-c8;
+
+        i {
+          color: $--color-c8;
+        }
+      }
+    }
+
+    .jr-file-del-icon {
+      position: absolute;
+      top: -5px;
+      right: -5px;
+    }
+  }
+}

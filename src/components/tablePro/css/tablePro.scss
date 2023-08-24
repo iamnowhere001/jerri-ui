@@ -1,0 +1,158 @@
+//  用于打印的样式
+.jr-table-print {
+  th {
+    background-color: yellow;
+  }
+
+  th,
+  td {
+    font-size: 12px !important;
+    font-weight: normal !important;
+    border: 1px solid #000 !important;
+  }
+
+  td div {
+    font-size: 12px;
+  }
+}
+
+//  用于表格两侧的虚拟辅助边线
+.table-border__vertical {
+  height: 100%;
+  width: 1px;
+  border-right: 1px solid #adb1bc;
+  position: absolute;
+  z-index: 1;
+
+  &.right {
+    right: 0px;
+  }
+
+  &.left {
+    left: 0px;
+  }
+}
+//  用于表格两侧的虚拟辅助边线
+.table-border__horizontal {
+  width: 100%;
+  height: 1px;
+  border-top: 1px solid #adb1bc;
+  position: absolute;
+  z-index: 1;
+
+  &.bottom {
+    bottom: 0px;
+  }
+}
+
+.table-pro-container {
+  position: relative;
+
+  .load {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: hsla(0,0%,100%,.9);
+    transition: opacity .3s;
+  }
+
+  //  为了让在首列的单复选按钮位置正确
+  /deep/ .table__header-wrap th:first-child {
+    .el-radio-wrap {
+      margin-right: 0;
+    }
+  }
+
+  /deep/ {
+    td:first-child {
+      .el-radio-wrap {
+        margin-right: 0;
+
+        span.el-radio-label {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+//  基础表格外壳样式
+.table-wrap {
+  border-radius: $--border-radius-base;
+  overflow: hidden;
+
+  .table__header-wrap {
+    overflow: hidden;
+  }
+
+  //  表体样式
+  .table__body-wrap {
+    overflow-x: hidden;
+
+    &-overflowX {
+      overflow-x: scroll;
+    }
+
+    &-overflowY {
+      overflow-y: scroll;
+    }
+  }
+}
+
+// 左侧表格固定列
+.table-fixed-left-wrap {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.12);
+
+  .table-fixed-left__body-wrap {
+    overflow: hidden;
+  }
+}
+
+// 右侧表格固定列
+.table-fixed-right-wrap {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
+
+  .table-fixed-right__body-wrap {
+    position: absolute;
+    right: 0px;
+    top: 45px;
+    overflow: hidden;
+  }
+}
+
+//  @Todo: August - 缓兵之计
+.table-fixed-right__header-wrap {
+  background-color: $--color-c4;
+}
+
+//  用于遮挡右侧表格固定列右上方空缺的卡片
+.table-fixed-right__header-card {
+  position: absolute;
+  top: -1px;
+  right: 0px;
+  background-color: $--color-c4;
+  border-top: 1px solid $--color-c3;
+  border-bottom: 1px solid $--color-c3;
+}
+
+/deep/ .page_box {
+  margin-top: 15px;
+}

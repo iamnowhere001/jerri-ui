@@ -1,0 +1,16 @@
+.jr-scroll-view {
+  overflow-y: auto;
+
+  /deep/ .load {
+    height: 40px;
+    overflow: hidden;
+
+    .container {
+      width: 80px;
+      height: 80px;
+      margin: 0;
+      transform: translateX(-50%);
+      top: -20px;
+    }
+  }
+}

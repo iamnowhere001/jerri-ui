@@ -1,0 +1,170 @@
+.source-upload-wrap {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 12px 0px rgba(39, 41, 90, 0.2);
+  position: fixed;
+  right: 20px;
+  padding-bottom: 18px;
+  bottom: 10px;
+  z-index: 2;
+
+  .source-upload-title {
+    text-align: left;
+    font-size: 14px;
+    padding: 18px 18px 0px 18px;
+    min-width: 250px;
+    line-height: 20px;
+
+    .scale {
+      width: 20px;
+      height: 20px;
+      float: right;
+      cursor: pointer;
+
+      &.close {
+        background: url("../../../assets/images/richTextEditor/close.png") center center no-repeat;
+      }
+
+      &.open {
+        background: url("../../../assets/images/richTextEditor/open.png") center center no-repeat;
+      }
+    }
+  }
+
+  .source-upload-tip {
+    font-size: 13px;
+    color: #999999;
+    text-align: left;
+    margin-top: 12px;
+    margin-bottom: 25px;
+    margin-left: 18px;
+    text-indent: 18px;
+
+    background: url("../../../assets/images/richTextEditor/bulb.png") left no-repeat;
+  }
+
+  .source-upload-list {
+    overflow-y: scroll;
+    @include scroll-bar;
+
+    li {
+      width: 360px;
+      height: 45px;
+      margin-bottom: 23px;
+      display: flex;
+      padding: 0px 18px;
+      font-size: 14px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      .upload-item-thumbnail {
+        width: 80px;
+        position: relative;
+        box-shadow: 0px 1px 2px 0px rgba(38, 50, 56, 0.16);
+
+        &.shade {
+          opacity: .5;
+        }
+
+        &.video {
+          background: url("../../../assets/images/richTextEditor/video-wrap.png") center center no-repeat;
+
+          >.img-wrap {
+            width: 58px;
+            height: 41px;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin: auto;
+            overflow: hidden;
+          }
+        }
+
+        .img-wrap {
+          overflow: hidden;
+          background-color: #fff;
+
+          img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            margin: auto;
+            background-color: #f7f9fb;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .upload-item-info {
+        flex: 3;
+        text-align: left;
+        margin-left: 15px;
+
+        .file-name {
+          max-width: 220px;
+          overflow: hidden;
+          display: inline-block;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 13px;
+        }
+
+        .progress {
+          border-bottom: 3px solid #ccc;
+          padding-bottom: 3px;
+          margin-bottom: 3px;
+          position: relative;
+
+          .progress-bar {
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            height: 3px;
+            width: 45%;
+            background-color: $--color-c8;
+          }
+        }
+
+        .upload-speed {
+          font-size: 12px;
+          color: #999999;
+
+          .percent {
+            float: right;
+          }
+        }
+      }
+
+      .upload-item-operate {
+        margin-top: 6px;
+        font-size: 12px;
+
+        span {
+          cursor: pointer;
+          margin-right: 10px;
+          display: inline-block;
+        }
+
+        .success {
+          color: $--color-c8;
+        }
+
+        .fail {
+          &.text {
+            cursor: unset;
+          }
+
+          cursor: pointer;
+          color: #f55c54;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+//  使用默认表格边框时的样式
+.table-pro-container.border-inset {
+
+  //  为行与单元格赋值默认边线属性
+  th,
+  td {
+    border-collapse: collapse;
+    border-width: 1px;
+    border-color: $--color-c3;
+    border-style: inset;
+  }
+
+  .table-fixed-right__header-card {
+    top: 0px;
+    right: 1px;
+  }
+}

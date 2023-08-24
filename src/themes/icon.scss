@@ -1,0 +1,55 @@
+// icon样式
+.j-icon {
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: 23px;
+  color: $--color-c8;
+
+  &:hover {
+    color: $--color-c9;
+  }
+
+  &.j-disabled {
+    color: $--color-c3;
+    cursor: no-drop;
+  }
+}
+
+// 警告提示
+.j-warning-box {
+  position: relative;
+
+  .j-warning {
+    font-size: $--font-xs;
+    position: absolute;
+    color: $--color-c11;
+    left: 8px;
+    right: auto;
+    top: 3px;
+    background-color: $--color-c6;
+
+    i {
+      padding-right: 3px;
+      font-size: $--font-s;
+      vertical-align: -2px;
+    }
+  }
+}
+
+.j-del-icon {
+  width: 26px;
+  height: 26px;
+  background-color: $--color-c3;
+  @include center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $--color-c11;
+  }
+
+  i {
+    width: 12px;
+    height: 2px;
+    background-color: $--color-c6;
+  }
+}

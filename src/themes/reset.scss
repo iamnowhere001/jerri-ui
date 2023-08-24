@@ -1,0 +1,127 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  @include scroll-bar;
+  height: 100%;
+
+  body,
+  #app {
+    height: 100%;
+  }
+}
+
+body {
+  font-size: $--font-xs;
+  font-family: 'Microsoft YaHei';
+  color: $--color-c1;
+
+  input,
+  textarea {
+    outline: none;
+    font-family: 'Microsoft YaHei';
+    @include placeholder($--color-c2);
+  }
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  outline: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+*:focus {
+  outline: none;
+}

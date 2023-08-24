@@ -1,0 +1,116 @@
+.page_box {
+  .page_filter {
+    display: flex;
+    float: left;
+    line-height: 24px;
+
+    >span,
+    >label {
+      line-height: 32px;
+    }
+
+    span:last-of-type {
+      margin-left: 20px;
+    }
+
+    >.jerri-select {
+      width: 56px;
+      font-size: 13px;
+      margin: 0 10px;
+      height: 32px;
+
+      input {
+        font-size: 13px;
+      }
+
+      li {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .page_index {
+    float: right;
+
+    a {
+      border: 1px solid $--color-c3;
+      height: 32px;
+      line-height: 32px;
+      float: left;
+      min-width: 32px;
+      padding: 0 4px;
+      text-align: center;
+      margin-right: 8px;
+      color: $--color-c1;
+      background-color: $--color-c6;
+      text-decoration: none;
+      font-weight: normal;
+      border-radius: $--border-radius-base;
+
+      &:hover {
+        color: $--color-c9;
+        border: 1px solid $--color-c9;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a.prev {
+      font-size: $--font-l;
+      background-color: $--color-c6;
+      width: 32px;
+      text-align: center;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    a.next {
+      font-size: $--font-l;
+      background-color: $--color-c6;
+      width: 30px;
+      text-align: center;
+      position: relative;
+      transform: rotate(-180deg);
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+
+    a.no-drop {
+      cursor: no-drop;
+      color: $--color-c18;
+      border: 1px solid $--color-c3;
+    }
+
+    a.active {
+      color: $--color-c6;
+      background-color: $--color-c8;
+      border: 1px solid $--color-c8;
+    }
+
+    a.disable {
+      pointer-events: none;
+      line-height: 24px;
+      width: 20px;
+      min-width: 20px;
+      border: 0;
+      padding: 0;
+      background-color: $--color-c0;
+      color: $--color-c1;
+    }
+  }
+}

@@ -1,0 +1,146 @@
+// 重置样式
+@import "./reset.scss";
+// 字体背景样式
+@import "./fontBc.scss";
+// 边框样式
+@import "./border.scss";
+// 边距样式
+@import "./backGauge.scss";
+// 手指样式
+@import "./cursor.scss";
+// 文本样式
+@import "./text.scss";
+// icon样式
+@import "./icon.scss";
+// 按钮样式
+@import "./button.scss";
+// 图片样式
+@import "./image.scss";
+// 字体库CDN样式文件
+@import url(//jerrisoft-test-oss.oss-cn-shenzhen.aliyuncs.com/CDN/font/style.css);
+
+.j-container {
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 0 50px 300px;
+  margin: 0 auto;
+  min-width: 970px;
+  width: fit-content;
+  min-width: 100%;
+  background: url("../assets/images/container/pic.png") fixed no-repeat bottom
+    right $--color-c5;
+}
+
+.j-window-center {
+  margin: 0 auto;
+  padding-right: $--width-menu;
+}
+
+// 清除浮动
+.j-clearfix {
+  &::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+// 相对定位
+.j-relative {
+  position: relative;
+}
+
+// 绝对定位
+.j-absolut {
+  position: absolute;
+  &-top {
+    top: 0;
+  }
+  &-right {
+    right: 0;
+  }
+  &-bottom {
+    bottom: 0;
+  }
+  &-left {
+    left: 0;
+  }
+}
+
+// 垂直水平居中
+.j-center {
+  @include center;
+}
+
+// 遮罩层
+.j-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba($--color-c6, 0.6);
+  @include center;
+}
+
+// 视频遮罩
+.j-video-mask {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: rgba($--color-c1, 0.5);
+  @include center;
+
+  i {
+    color: $--color-c6;
+    font-size: $--font-xxl;
+  }
+}
+
+// 气泡样式
+.j-bubble-box {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: none;
+  .j-bubble {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 20px;
+    color: #000;
+    font-size: 13px;
+    font-variant: tabular-nums;
+    line-height: 1.7;
+    list-style: none;
+    position: fixed;
+    z-index: 10;
+    font-weight: 400;
+    white-space: normal;
+    text-align: left;
+    cursor: auto;
+    background-color: #fff;
+    box-shadow: 1px 2px 2px 0px rgba(121, 130, 146, 0.48);
+    border-radius: 3px;
+    border: solid 1px rgba(171, 192, 186, 0.96);
+    max-width: 400px;
+    max-height: 140px;
+    overflow-y: auto;
+    overflow-x: hiddeo;
+    white-space: nowrap;
+    p {
+      word-break: break-all;
+      width: 100%;
+      white-space: initial;
+    }
+    @include scroll-bar;
+  }
+}
+
+// 细滚动条
+.j-scroll-bar {
+  @include scroll-bar;
+}

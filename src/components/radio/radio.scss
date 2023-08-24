@@ -1,0 +1,31 @@
+// 引入复选样式
+@import '../checkbox/checkbox.scss';
+
+.el-radio-wrap {
+
+  .el-radio {
+
+    &.circle-warp {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: $--color-c6;
+    }
+
+    &.focus-border.circle-warp {
+      border-width: 2px;
+    }
+
+    .inner-circle {
+      background-color: $--color-c8;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  }
+}
