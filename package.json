@@ -10,7 +10,10 @@
     "lib:publish": "npm run lib:build && npm publish",
     "lib:umd:build": "vue-cli-service build --target lib --dest lib src/components/index.js",
     "lib:umd:publish": "npm run lib:umd:build && npm publish",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "prepare": "husky install",
+    "commit": "git add . && cz-customizable",
+    "changelog": "conventional-changelog -p cz-config.js -i CHANGELOG.md -s -r 0"
   },
   "main": "lib/index/index.js",
   "keywords": [
@@ -45,6 +48,21 @@
     "sass-loader": "^10.0.0",
     "sass-resources-loader": "^2.0.3",
     "vue-loader": "^17.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.11",
+    "@commitlint/config-conventional": "^17.7.0",
+    "commitizen": "^4.3.0",
+    "commitlint": "^17.7.1",
+    "commitlint-config-cz": "^0.13.3",
+    "commitlint-config-git-commit-emoji": "^1.0.0",
+    "conventional-changelog": "^5.0.0",
+    "conventional-changelog-cli": "^4.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "cz-customizable": "^7.0.0",
+    "husky": "^8.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
   }
 }

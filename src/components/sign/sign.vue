@@ -164,7 +164,7 @@ export default {
     },
 
     /**
-     * @desc 清空签字
+     * @desc 清空签字板
      * @author 郑恺
      * @date 2020-1-2
      */

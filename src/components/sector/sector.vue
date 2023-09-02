@@ -19,7 +19,6 @@
            :style="{width: `${2*radius}px`, height: `${2*radius}px`}"
            :class="{'suc':progress>=1}"></div>
     </div>
-
     <div class="circle"
          :style="{width: `${2*radius -2}px`, height: `${2*radius - 2}px`}"
          v-if="isShow">
@@ -36,7 +35,6 @@
                 stroke-dasharray="1069 0"></circle>
       </svg>
     </div>
-
   </div>
 </template>
 
@@ -50,7 +48,6 @@ export default {
       default: 0
     }
   },
-
   data() {
     return {
       isShow: true,
@@ -79,6 +76,7 @@ export default {
         this.$refs.circle.style = "transition: stroke-dasharray 0.3s;";
         this.computeStroke();
         if (val >= 1) {
+          // 加载完成
           this.strokeColor = "transparent";
           setTimeout(() => {
             this.isShow = false;
@@ -112,7 +110,7 @@ export default {
         this.strokeColor = "rgba(0,0,0,0.5)";
         let warp = this.$refs.circleWrap.getBoundingClientRect();
         let minVal = Math.min(warp.width, warp.height);
-        this.radius = ((minVal * 0.7) / 2).toFixed(0);
+        this.radius = ((minVal * 0.7) / 2).toFixed(0); // 初始化扇形半径
         this.computeStroke();
         if (this.progress >= 1) {
           this.isShow = false;
