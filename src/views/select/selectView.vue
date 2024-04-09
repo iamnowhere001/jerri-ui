@@ -52,7 +52,7 @@
 <script>
 export default {
   name: "selectView",
-  label: "下拉组件操场",
+  label: "下拉",
   components: {},
   mixins: [],
   data() {

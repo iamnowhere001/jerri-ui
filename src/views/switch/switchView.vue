@@ -10,7 +10,6 @@
       <li>
         <label>禁用</label>
         <jr-switch v-model="disabledOff" disabled></jr-switch>
-
         <jr-switch class="j-pt-10" v-model="disabledOn" disabled></jr-switch>
         <jr-switch
           class="j-pt-10"
@@ -31,7 +30,7 @@
 <script>
 export default {
   name: "switchView",
-  label: "开关操场",
+  label: "开关",
   components: {},
   mixins: [],
   data() {

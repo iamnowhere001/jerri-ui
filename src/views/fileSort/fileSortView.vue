@@ -1,7 +1,9 @@
 <template>
   <div>
-    <h1 style="font-size: 40px;">文件排序操场</h1>
+   <h2 class="j-mb-20">文件排序组件</h2>
+
     <jr-button @click="showFileSort = true">打开</jr-button>
+    
     <jr-file-sort :files="filesArr"
                   title="文件排序弹窗的标题"
                   :showFileSort.sync="showFileSort"></jr-file-sort>
@@ -11,7 +13,7 @@
 <script>
 export default {
   name: "fileSortView",
-  label: "文件排序操场",
+  label: "文件排序",
   data() {
     return {
       filesArr: [
@@ -309,9 +311,3 @@ export default {
   methods: {}
 };
 </script>
-
-<style lang="scss" scoped>
-.cell {
-  margin: 50px;
-}
-</style>

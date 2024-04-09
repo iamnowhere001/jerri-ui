@@ -1,6 +1,7 @@
 # 新版本组件库改动
 
 ## 公共样式调整
+
 1. 删除`.j-ft-green`
 2. 删除`.j-ft-green-hover`
 3. 删除`.j-ft-darkgray` 深色灰色字体
@@ -12,9 +13,9 @@
 9. 新增`.j-window-center`根据整个窗口居中
 10. 新增`.j-pre-wrap`保留文本格式
 
-##  工具类添加
+## 工具类添加
 
-1.  新增 `getSource` 方法，用于获取外部依赖资源
+1. 新增 `getSource` 方法，用于获取外部依赖资源
 
 ## button
 
@@ -50,26 +51,31 @@
 
 2. 下拉选项级输入框高度由`26`调整为`32`可能会影响业务系统的布局样式
 
-##  chooseDistrict
+## chooseDistrict
 
 * 修改拼写错误的方法名 `cancle` 为 `cancel`
 
 
 ## htmlToPdf
+
 * `actionUrl`参数调整为`action`
 
 ## htmlToImg
+
 * 组件名字`htmlToImg`修改成`JrHtmlToImg`
 
 
 ## preview
+
 * 删除参数`imgViewConfig`，图片查看器配置参数根据图片查看器传即可
 
 
 ## switch
+
 * 新增`type`参数`["success", "danger"]`对应绿色和红色开关
 
 ## input
+
 1. 输入框默认高度修改 `26px` => `32px`
 
 2. 设置`readonly = true`时，  光标修改为手势
@@ -79,24 +85,29 @@
 4. `surplusVisibilityConfig` 文本域右下角 可输入字数 的显示控制，接收 `Number`类型， 默认 10， <= 10 ， 显示 可输入字数
 
 ## load
+
 1. 定义有识别度的name `load` => `loadingPetal`
 
 2. 是否显示属性变动   `isShow` => `visible`
 
 ## loading
+
 * 定义有识别度的name `loading` => `loadingStep`
 
 ## newupload
+
 1. 组件更名为 `uploadFile`
 2. 删除参数`imgViewConfig`，按照图片查看器的参数进行传参即可
 
 ## searchBar
+
 1. 删除`btns`参数
 2. 修改`searchList`中的日历范围开始日期绑定的key值`starKey`，调整为`startKey`
 3. 查询组件距离底部`16px`
 4. 新增`isShowQuery`参数 是否隐藏查询按钮
 5. `searchList`参数调整,删除每项中对应的参数有:`list`、`inputType`、`dateType`、`minStart`、`maxStart`
 6. 删除事件`handleInput`、`handleBlur`、`iconClick`、`inputFocus`、`watchItem`
+
 ```javascript
 searchList = [
   // 下拉组件
@@ -157,40 +168,48 @@ searchList = [
 ```
 
 ## treeItemBox
+
 1. 删除`scrollViewConfig`参数，调整为根据滚动加载更多组件传参
 2. 删除`showBtns`参数，由业务系统自己控制是否显示插槽按钮
 
 ## headCut
+
 1. 修改组件名`headCut`为`JrHeadCut`
 2. 删除`actionUrl`参数,按照上传组件`action`进行传参
 3. 新增`visible`参数控制显示隐藏,删除`on-close`方法,采用`visible.sync`同步关闭
 
 ## head
-* 边距调整
+
+1. 边距调整
 
 ## page
+
 1. 分页下拉调整为`[15, 30, 50, 100]`
 2. 默认分页容量选择`15`
 
 ## form-item
+
 1. 默认必填项`top`值调整为`4px`,字体大小调整为`14px`
 2. 表单每行之间距离从`22px`调整为`16px`
 3. 表单label 后生成冒号
 4. `labelPositon` 为 `justify` `时，label` 文字后面会自动跟一个 `冒号`
 
 ## tableFile
+
 1. 调整组件名为`tableFileUpload`
 2. 删除`uploadUrl`参数,调整为上传组件对应`action`参数
 
 ## checkbox-group
-*. 新增max限制最大选中数量
 
+1. 新增max限制最大选中数量
 
 ## 未参与搬家的旧组件 更新新版组件库需要替换成新查询组件和新表格组件
-1.  `headerSearch`
-2.  `table`
-3.  `advancedQuery`
-4.  `waterMark`
+
+1. `headerSearch`
+2. `table`
+3. `advancedQuery`
+4. `waterMark`
 
 ## 新增组件
+
 1. `container`组件,和`j-container`样式一样,可通过参数控制标题组件是否显示及标题显示内容

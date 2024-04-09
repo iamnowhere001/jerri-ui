@@ -73,12 +73,11 @@
 <script>
 export default {
   name: "searchBarView",
-  label: "查询组件操场",
+  label: "查询",
   data() {
     return {
       inputVal: "",
       searchList: [
-        // 加载下拉选择器
         {
           type: "input", // 公共属性，决定加载什么类型组件（可选值有select/input/datePicker/datePicker）
           label: "水果大王：", // 公共属性，组件前的提示语，默认组件间距为40px,不传则为6px
@@ -154,7 +153,7 @@ export default {
       ],
 
       searchList1: [
-        // 加载下拉选择器
+        
         {
           type: "select",
           val: "",
@@ -257,7 +256,7 @@ export default {
         },
       ],
       searchList2: [
-        // 加载下拉选择器
+        
         {
           type: "select",
           val: "杨梅红艺术教育集团",

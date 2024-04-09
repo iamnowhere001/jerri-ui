@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <h1 style="font-size: 40px;">签字板操场</h1>
+  <div class="content">
+   <h2 class="j-mb-20">签字板组件</h2>
+
     <jr-button @click="isShow = !isShow">打开签字板</jr-button>
     <jr-sign ref="sign"
              :is-show.sync="isShow"
@@ -16,14 +17,13 @@
 <script>
 export default {
   name: "signView",
-  label: "签字板操场",
+  label: "签字板",
   data() {
     return {
       imgData: "",
       isShow: false
     };
   },
-  computed: {},
   methods: {
     getSign(res) {
       this.imgData = this.$refs.sign.canvaDom.toDataURL("image/jpeg", 0.1);
@@ -34,20 +34,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.select-wrap {
-  width: 180px;
-}
-
-p {
-  margin: 10px 0px;
-}
-
-hr {
-  margin: 10px 0px;
-}
-
-/deep/ .jr-button-wrap {
-  margin: 0px 5px;
-}
-</style>

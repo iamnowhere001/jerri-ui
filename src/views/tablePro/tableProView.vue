@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="font-size: 40px;">表格Pro操场</h1>
+   <h2 class="j-mb-20">表格Pro组件</h2>
 
     <div class="cell j-btn-group">
       <template v-for="(square, index) in squareList">
@@ -20,7 +20,7 @@ import tableViewRoutes from "./tableViewRoutes";
 
 export default {
   name: "tableProView",
-  label: "TablePro操场",
+  label: "TablePro",
   data() {
     return {
       squareList: tableViewRoutes

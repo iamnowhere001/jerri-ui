@@ -4,7 +4,7 @@
       <img src="../../assets/images/common/timg.gif" />
     </div>
 
-    <h1>组件库演习大操场</h1>
+    <h1>组件库演示</h1>
     <ul class="playground ">
       <template v-for="(view, index) in viewRouter">
         <li v-if="view.label"

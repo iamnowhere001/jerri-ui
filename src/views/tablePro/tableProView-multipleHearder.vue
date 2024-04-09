@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="font-size: 40px;">表格Pro多级表头操场</h1>
+   <h2 class="j-mb-20">表格Pro多级表头组件</h2>
 
     <div class="cell">
       <h3>多级表头</h3>

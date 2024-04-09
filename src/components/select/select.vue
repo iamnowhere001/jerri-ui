@@ -1,9 +1,6 @@
 /****************************************************************************
-所属系统: 组件库 所属模块: 下拉选择器 创建时间: 2020-01-02 维护人: 郑恺
-*┌────────────────────────────────────────────────────────────┐
-*│　此技术信息为本公司机密信息，未经本公司书面同意禁止向第三方披露．│
-*│　版权所有：杰人软件(深圳)有限公司　　　　　　　　　　　 │
-*└────────────────────────────────────────────────────────────┘
+所属系统: 组件库 所属模块: 下拉选择器 创建时间: 2020-01-02 
+
 ***************************************************************************/
 <template>
   <div class="jerri-select"
@@ -287,6 +284,7 @@ export default {
     handleBodyClick () {
       this.isSelect = false;
     },
+
     /**
      * @desc 获取组件到body顶部的距离
      * @param {DOM} el Dom元素
@@ -300,6 +298,7 @@ export default {
       }
       return offsetTop;
     },
+
     /**
      * @desc toggleDrop 判断下拉框向上还是向下显示
      * @param {Number} menuHeight 菜单高度
@@ -321,6 +320,7 @@ export default {
         this.distance
       );
     },
+
     // 打开或关闭下拉框
     async selected () {
       // 延迟多少时间显示下拉框;
@@ -343,6 +343,7 @@ export default {
       // 重置下拉选项
       this.showList = this.showListCp;
     },
+
     showOptions (el) {
       let currentPosition = el.getBoundingClientRect();
       let bd = document.body;
@@ -365,6 +366,7 @@ export default {
       if (this.isOpened) {
         return;
       }
+
       setTimeout(() => {
         let ul = this.$refs.ul;
         let ClientRectOfUl = ul.getBoundingClientRect();
@@ -375,6 +377,7 @@ export default {
         });
       });
     },
+
     // 判断当前选项应该在选择器是上方还是下方
     isOnTop (currentPosition) {
       // 每一个选项的基础高度
@@ -393,6 +396,7 @@ export default {
       let toBottom = Math.ceil(window.innerHeight - currentPosition.top);
       return toBottom < sumHeight;
     },
+
     // 在选择器下方展示
     beneath (options, currentPosition) {
       let top =
@@ -410,6 +414,7 @@ export default {
           4}px`;
       options.style.transform = "";
     },
+
     // 在选择器上方方展示
     onTop (options, currentPosition) {
       let top =
@@ -422,6 +427,7 @@ export default {
           : `${Math.ceil(currentPosition.y) - 4}px`;
       options.style.transform = "translateY(-100%)";
     },
+
     // 点击选项
     selItem (i, el) {
       // 过滤禁用
@@ -449,6 +455,7 @@ export default {
       this.$emit("change", res, el);
       this.dispatch("JrFormItem", "form-change", [res]);
     },
+
     // 搜索
     search (e) {
       const val = e.target.value.trim();
@@ -463,11 +470,13 @@ export default {
         return element.includes(val);
       });
     },
+
     // 还原过滤数组
     reArr () {
       this.searchArr = this.$utils.deepCopy(this.list);
       this.showListCp = this.$utils.deepCopy(this.showList);
     },
+
     // 根据对象数组中的某值找到该项
     findItemByVal (key, val, arr) {
       if (Array.isArray(arr)) {
@@ -476,6 +485,7 @@ export default {
         });
       }
     },
+
     // 是否有fixed定位的父级
     hasFixedParent (el) {
       let parent = el.parentElement;
@@ -489,19 +499,23 @@ export default {
         parent = parent.parentElement;
       }
     },
+
     // 获取元素指定css属性
     getCssAtrribute (el, arr) {
       return getComputedStyle(el)[arr];
     },
+
     // 下拉失焦事件
     handleBlur () {
       this.$emit("on-blur", this.val);
       this.dispatch("JrFormItem", "form-blur", [this.val]);
     },
+
     // 聚焦
     handleFocus () {
       this.$emit("on-focus", true);
     },
+
     focus () {
       this.dispatch("JrFormItem", "form-focus", [true]);
       this.$refs.select_input.focus();
@@ -509,6 +523,7 @@ export default {
         this.selected();
       });
     },
+    
     // 设置选择器外衣
     setInputFace (bgc) {
       const input = this.$refs.select_input;

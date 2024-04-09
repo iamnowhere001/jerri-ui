@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <h1 style="font-size: 40px;">通讯录操场</h1>
+  <div class="content">
+    <h2 class="j-mb-20">通讯录组件</h2>
+    
     <div>
       <jr-contacts-list
         :isShowPop="isShowPop"

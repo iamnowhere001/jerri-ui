@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="font-size: 40px;">表格Pro长列表操场</h1>
+   <h2 class="j-mb-20">表格Pro长列表组件</h2>
 
     <div class="cell">
       <h3>长列表表格</h3>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="font-size: 40px;">表格Pro固定列操场</h1>
+   <h2 class="j-mb-20">表格Pro固定列组件</h2>
 
     <div class="cell">
       <h3>固定列</h3>

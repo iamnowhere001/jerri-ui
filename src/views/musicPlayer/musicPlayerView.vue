@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="font-size: 40px;">音乐播放器操场</h1>
+   <h2 class="j-mb-20">音乐播放器</h2>
     <p v-move>当前形态：{{type}}</p>
     <jr-music-player ref="musicPlayer"
                      :type.sync="type"
@@ -32,7 +32,7 @@
 <script>
 export default {
   name: "musicPlayerView",
-  label: "音乐播放器组件操场",
+  label: "音乐播放器",
   data() {
     return {
       type: "window",

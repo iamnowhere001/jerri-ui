@@ -93,7 +93,7 @@
 <script>
 export default {
   name: "uploadFileProView",
-  label: "新文件上传操场",
+  label: "新文件上传",
   data() {
     return {
       // 上传路径

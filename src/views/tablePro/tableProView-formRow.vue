@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="cell">
-      <h1 style="font-size: 40px;">表格表单行案例操场</h1>
+     <h2 class="j-mb-20">表格表单行案例组件</h2>
       <h3>展示表格行需要额外操作的案例代码</h3>
-      <h3>查看案例代码，请在操场中查看 tablePro-formRow.vue 文件</h3>
+      <h3>查看案例代码，请在组件中查看 tablePro-formRow.vue 文件</h3>
     </div>
 
     <div class="cell">

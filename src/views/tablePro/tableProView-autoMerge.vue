@@ -1,10 +1,10 @@
 <template>
   <div>
     <div class="cell">
-      <h1 style="font-size: 40px;">表格Pro自动合并操场</h1>
+     <h2 class="j-mb-20">表格Pro自动合并组件</h2>
       <h3>为表格中相同的内容进行自动合并</h3>
       <h3>你可以自主控制，能够合并的列，能够合并的方向，合并的首选方向</h3>
-      <h3>查看案例代码，请在操场中查看 tablePro-autoMerge.vue 文件</h3>
+      <h3>查看案例代码，请在组件中查看 tablePro-autoMerge.vue 文件</h3>
     </div>
 
     <div class="cell">

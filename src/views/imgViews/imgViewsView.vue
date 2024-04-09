@@ -1,7 +1,7 @@
 <template>
   <div class="j-container">
     <h1 style="font-size: 40px;"
-        class="j-mb-10">图片查看器操场</h1>
+        class="j-mb-10">图片查看器组件</h1>
     <jr-button @click="changeOperate('')"
                class="j-mb-10">正常打开</jr-button>
     <jr-imgView :list="list"
@@ -16,14 +16,13 @@
                  class="j-mr-10">下面的操作栏可配置(取消掉缩略图操作)</jr-button>
 
     </div>
-
   </div>
 </template>
 
 <script>
 export default {
   name: "imgViewsView",
-  label: "图片查看器操场",
+  label: "图片查看器",
   data() {
     return {
       isShow: false,
@@ -88,8 +87,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.cell {
-  margin: 50px;
-}
-</style>

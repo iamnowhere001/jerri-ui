@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="font-size: 40px;">表格Pro基础形态操场</h1>
+   <h2 class="j-mb-20">表格Pro基础形态组件</h2>
 
     <div class="cell">
       <h3>单选表格</h3>

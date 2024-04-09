@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="font-size: 40px;">表格Pro树状操场</h1>
+   <h2 class="j-mb-20">表格Pro树状组件</h2>
 
     <h1 style="font-size: 120px">暂未完成</h1>
 

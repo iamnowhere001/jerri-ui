@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1 style="font-size: 40px;">扇形进度操场</h1>
+   <h2 class="j-mb-20">扇形进度组件</h2>
+
     <jr-progress-sector :progress="progress">
       <div style="height: 500px; width: 500px; background-color: #ccc;"></div>
     </jr-progress-sector>
@@ -12,7 +13,7 @@
 <script>
 export default {
   name: "sectorView",
-  label: "扇形进度操场",
+  label: "扇形进度",
   data() {
     return {
       progress: 0
@@ -35,9 +36,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss" scoped>
-.cell {
-  margin: 50px;
-}
-</style>

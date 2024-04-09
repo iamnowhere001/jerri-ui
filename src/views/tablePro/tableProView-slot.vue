@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="font-size: 40px;">表格Pro操场</h1>
+   <h2 class="j-mb-20">表格Pro组件</h2>
 
     <h2>
       表格中只要你能看见的，都能自定义改造
