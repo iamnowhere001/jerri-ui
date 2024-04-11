@@ -1,14 +1,7 @@
-/****************************************************************************
-
-所属系统: 组件库
-所属模块: 组件 - 视频播放组件
-
-
-***************************************************************************/
 
 <template>
-  <div class="box">
-    <h2 class="j-mb-20">视频播放器组件</h2>
+  <div class="content">
+    <h2 class="j-mb-20">视频播放器</h2>
     <JrVideoPlayer ref="video"
                    :boxWidth="640"
                    :boxHeight="360"
@@ -35,7 +28,6 @@ export default {
   data() {
     return {
       url: "",
-      url2: "",
       sub: [
         {
           content: "想想上帝为什么创造你吧想想上帝为什么创造你吧",
@@ -159,23 +151,4 @@ export default {
   }
 };
 </script>
-<style scoped lang="scss">
-.box {
-  margin: 50px;
-}
-.video-detail {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-</style>
+

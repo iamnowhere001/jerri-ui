@@ -1,42 +1,37 @@
 
 <template>
   <div class="content">
-    <h2 class="j-mb-20">按钮组件</h2>
+    <h2 class="j-mb-20">按钮</h2>
 
     <!-- 常规按钮高度 -->
     <div class="left">
       <p class="nav">常规样式 32px高</p>
-      <jr-button @click="deleteBtn">确定</jr-button>
+      <jr-button >确定</jr-button>
       <jr-button class="j-ml-10">OK</jr-button>
       <jr-button class="j-ml-10">提交审核</jr-button>
 
       <p class="nav">幽灵按钮</p>
-      <jr-button type="plain" @click="deleteBtn">取消</jr-button>
+      <jr-button type="plain" >取消</jr-button>
       <jr-button class="j-ml-10" type="plain">Cancel</jr-button>
       <jr-button class="j-ml-10" type="plain"
         ><i class="j-icon icon-write-btn"></i>修改</jr-button
       >
 
       <p class="nav">红色按钮</p>
-      <jr-button type="danger" @click="deleteBtn">删除</jr-button>
+      <jr-button type="danger">删除</jr-button>
 
       <jr-button type="danger" class="j-ml-10">Delete</jr-button>
 
       <p class="nav">禁用按钮</p>
-      <jr-button disabled @click="deleteBtn">禁用按钮</jr-button>
+      <jr-button disabled >禁用按钮</jr-button>
       <jr-button class="j-ml-10" type="danger" disabled>红色禁用</jr-button>
 
       <p class="nav">幽灵按钮禁用</p>
-      <jr-button type="plain" disabled @click="deleteBtn">禁用按钮</jr-button>
+      <jr-button type="plain" disabled >禁用按钮</jr-button>
       <jr-button type="plain" class="j-ml-10" disabled>Disabled</jr-button>
-
       <p class="nav">删除按钮</p>
-      <jr-button type="delete" disabled @click="deleteBtn"
-        >深圳百花校区</jr-button
-      >
-      <jr-button type="delete" class="j-ml-10" @click="deleteBtn"
-        >School</jr-button
-      >
+      <jr-button type="delete" disabled>深圳百花校区</jr-button>
+      <jr-button type="delete" class="j-ml-10" >School</jr-button>
 
       <p class="nav">带加号按钮</p>
       <jr-button slotText="新增" disabled type="plain" />
@@ -90,9 +85,7 @@ export default {
   name: "buttonView",
   label: "按钮",
   methods: {
-    deleteBtn() {
-      console.log("删除");
-    },
+
   },
 };
 </script>

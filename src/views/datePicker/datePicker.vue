@@ -1,5 +1,4 @@
 
-
 <template>
   <div class="date-picker grid">
     <ul>
@@ -20,6 +19,7 @@
         <jr-date-picker v-model="yearMonth"
                         type="month"></jr-date-picker>
       </li>
+
       <li>
         <label>时分选择</label>
         <jr-date-picker v-model="time"

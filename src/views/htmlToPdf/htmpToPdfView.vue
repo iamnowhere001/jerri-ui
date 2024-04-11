@@ -139,11 +139,5 @@ export default {
   img {
     height: 300px;
   }
-  // /deep/ .table-wrap {
-  //   thead {
-  //     th {
-  //     }
-  //   }
-  // }
 }
 </style>

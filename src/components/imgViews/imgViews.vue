@@ -2,7 +2,6 @@
 
 所属系统: 组件库
 所属模块: 图片查看器
-创建时间: 2020-01-02
 
 ***************************************************************************/
 <template>
@@ -190,6 +189,7 @@ const minHeight = 550;
 
 export default {
   name: "JrImgView",
+  mixins: [drag, thumbnail],
   props: {
     //  图片列表
     list: {
@@ -286,7 +286,6 @@ export default {
       deg: 0
     };
   },
-  mixins: [drag, thumbnail],
   computed: {
     //  拥有此类型
     hasOperate(name) {

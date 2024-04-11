@@ -65,8 +65,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.select-wrap {
-  width: 180px;
-}
-</style>

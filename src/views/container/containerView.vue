@@ -1,11 +1,9 @@
 
 <template>
-
   <jr-container title="测试标题">
-
     <!-- 标题组件插槽 -->
     <template #headSlot>
-      <span>123</span>
+      <span>页面标题</span>
     </template>
 
     <div style="width: 800px;">
@@ -21,8 +19,6 @@
 export default {
   name: "containerView",
   label: "容器组件",
-  components: {},
-  mixins: [],
   data() {
     return {
       searchList: [
@@ -167,18 +163,4 @@ export default {
   }
 };
 </script>
-<style scoped lang='scss'>
-.box {
-  display: flex;
-  height: 100%;
-  .left-box {
-    height: 100%;
-    width: 180px;
-    background-color: green;
-  }
-  /deep/ .j-container {
-    flex: 1;
-    margin: 0;
-  }
-}
-</style>
+

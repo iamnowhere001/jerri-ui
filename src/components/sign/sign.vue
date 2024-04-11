@@ -2,8 +2,6 @@
 
 所属系统: 组件库
 所属模块: 签字板
-创建时间: 2020-01-02
-
 
 ***************************************************************************/
  <template>
@@ -37,8 +35,7 @@
     </div>
 
     <!-- 上传到指定系统 -->
-    <jr-upload :isAdd="1"
-               :files="files"
+    <jr-upload :files="files"
                v-bind="$attrs"
                @file-result="getResult">
     </jr-upload>
@@ -169,6 +166,7 @@ export default {
       this.context.clearRect(0, 0, this.canvaDom.width, this.canvaDom.height); // 清空的范围
       this.context.fillRect(0, 0, this.canvaDom.width, this.canvaDom.height); // 重设的范围
       this.isCanvas = false;
+
       this.$emit("clear-sign", true);
     },
 
@@ -179,6 +177,7 @@ export default {
      */
     close() {
       this.$emit("update:isShow", false);
+      
       this.$emit("close-sign", { value: this.isShow });
     },
 

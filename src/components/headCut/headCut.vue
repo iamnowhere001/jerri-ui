@@ -2,7 +2,7 @@
 
 所属系统: 组件库
 所属模块: 头像裁剪组件
-创建时间: 2020-01-02
+
 
 ***************************************************************************/
 <template>
@@ -73,7 +73,6 @@
 </template>
 
 <script>
-// 头像裁剪
 import { VueCropper } from "vue-cropper";
 
 export default {
@@ -115,10 +114,7 @@ export default {
   methods: {
     cutEvent() {
       // 监听图片属性变化  实时调用截图功能
-      let MutationObserver =
-        window.MutationObserver ||
-        window.WebKitMutationObserver ||
-        window.MozMutationObserver;
+      let MutationObserver = window.MutationObserver
 
       let element = document.getElementsByClassName("cropper-view-box")[0]
         .firstChild;

@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <h2 class="j-mb-20">文件上传组件</h2>
+    <h2 class="j-mb-20">文件上传</h2>
 
     <jr-button class="j-mr-40" @click="showName = !showName"
       >显示文件名 {{ showName }}</jr-button

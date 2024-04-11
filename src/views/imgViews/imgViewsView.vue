@@ -1,28 +1,26 @@
 <template>
   <div class="j-container">
-    <h1 style="font-size: 40px;"
-        class="j-mb-10">图片查看器组件</h1>
+    <h2 class="j-mb-20">图片查看</h2>
+
     <jr-button @click="changeOperate('')"
-               class="j-mb-10">正常打开</jr-button>
+               class="j-mr-10">打开</jr-button>
+               <jr-button @click="showImg(1)"
+                 class="j-mr-10">打开第二个</jr-button>
+      <jr-button @click="changeOperate('thumbnail')"
+                 class="j-mr-10">操作栏可配置(取消掉缩略图操作)</jr-button>
+
     <jr-imgView :list="list"
                 :imgindex.sync='imgindex'
                 :operateList='operateList'
                 :isShow.sync="isShow" />
 
-    <div class="remark proof">
-      <jr-button @click="showImg(1)"
-                 class="j-mr-10">打开第二个</jr-button>
-      <jr-button @click="changeOperate('thumbnail')"
-                 class="j-mr-10">下面的操作栏可配置(取消掉缩略图操作)</jr-button>
-
-    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "imgViewsView",
-  label: "图片查看器",
+  label: "图片查看",
   data() {
     return {
       isShow: false,

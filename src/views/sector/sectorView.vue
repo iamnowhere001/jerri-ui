@@ -5,6 +5,7 @@
     <jr-progress-sector :progress="progress">
       <div style="height: 500px; width: 500px; background-color: #ccc;"></div>
     </jr-progress-sector>
+
     <button @click="go">开冲</button>
     <button @click="stop">停！</button>
   </div>
@@ -19,7 +20,6 @@ export default {
       progress: 0
     };
   },
-  computed: {},
   methods: {
     go() {
       this.timer = setInterval(() => {

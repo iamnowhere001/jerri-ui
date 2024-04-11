@@ -1,24 +1,13 @@
-/****************************************************************************
-
-所属系统: 组件库
-所属模块: 组件 - 地区选择组件
-
-
-
-***************************************************************************/
 
 <template>
   <div class="content">
-    <h2 class="j-mb-20">地区选择组件</h2>
+    <h2 class="j-mb-20">地区选择</h2>
 
-    <div class="left">
       <jr-choose-district action='http://192.168.99.29:8200'
                           @success="success"
                           :selectAddress="addString"
                           :limit='2'
                           :address="address" />
-    </div>
-
   </div>
 </template>
 

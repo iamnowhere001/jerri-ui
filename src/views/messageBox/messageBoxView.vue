@@ -10,7 +10,7 @@
     <jr-head title="模态框"></jr-head>
 
     <h2 class="j-mb-20">确定弹窗</h2>
-    <jr-button @click="openConfirm('组件重复引用')">打开确定弹窗</jr-button>
+    <jr-button @click="openConfirm('组件重复引用')">确定弹窗</jr-button>
     <jr-button
       class="j-ml-20"
       @click="
@@ -18,14 +18,14 @@
           '组件重复引用组件重复引用组件重复引用组件重复引用组件重复引用组件重复引用组件重复引用'
         )
       "
-      >打开字很多的确定弹窗</jr-button
+      >字很多的确定弹窗</jr-button
     >
     <jr-button @click="desc = '我是描述'" class="j-ml-20">添加描述</jr-button>
     <jr-button @click="desc = ''" class="j-ml-20">删除描述</jr-button>
 
     <h2 class="j-mb-20 j-pt-30">警告弹窗</h2>
     <jr-button class="j-mr-20" @click="$messageBox({ tip: '警告弹窗' })"
-      >打开警告弹窗</jr-button
+      >警告弹窗</jr-button
     >
     <jr-button
       @click="
@@ -33,14 +33,14 @@
           tip: '警告弹窗警告弹窗警告弹窗警告弹窗警告弹窗警告弹窗警告弹窗',
         })
       "
-      >打开字很多的警告弹窗</jr-button
+      >字很多的警告弹窗</jr-button
     >
 
     <h2 class="j-mb-20 j-pt-30">成功弹窗</h2>
     <jr-button
       class="j-mr-20"
       @click="$messageBox({ tip: '成功的弹窗', type: 'success' })"
-      >打开成功弹窗</jr-button
+      >成功弹窗</jr-button
     >
     <jr-button
       @click="
@@ -50,11 +50,11 @@
           type: 'success',
         })
       "
-      >打开字很多的成功弹窗</jr-button
+      >字很多的成功弹窗</jr-button
     >
 
     <h2 class="j-mb-20 j-pt-30">自定义弹窗</h2>
-    <jr-button class="j-mr-20" @click="openPop()">打开自定义弹窗</jr-button>
+    <jr-button class="j-mr-20" @click="openPop()">自定义弹窗</jr-button>
 
     <jr-message-box
       v-model="isShow"

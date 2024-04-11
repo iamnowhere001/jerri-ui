@@ -1,6 +1,5 @@
 <template>
   <div class="j-container">
-    <div>
       <jr-scroll-view maxHeight="500px"
                       @scroll-end="scrollEnd"
                       :showLoading.sync="showLoading">
@@ -9,7 +8,6 @@
               :key="i">{{el}}</li>
         </ul>
       </jr-scroll-view>
-    </div>
   </div>
 </template>
 <script>
@@ -35,7 +33,6 @@ export default {
     this.list = list;
     this.arr = arr;
   },
-  mounted() {},
   methods: {
     scrollEnd() {
       setTimeout(() => {

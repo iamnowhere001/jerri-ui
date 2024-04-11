@@ -87,7 +87,6 @@ export default {
       ],
     };
   },
-  mounted() {},
   methods: {
     // 获取选中对象
     getBanner(res) {
@@ -97,22 +96,3 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-.content {
-  padding: 20px 50px;
-  .nav {
-    color: #666;
-    padding-bottom: 5px;
-    margin: 20px 0 10px 0;
-    border-bottom: 1px solid #d8d8d8;
-    width: 300px;
-  }
-  .left {
-    display: inline-block;
-  }
-  .right {
-    display: inline-block;
-    margin-left: 50px;
-  }
-}
-</style>

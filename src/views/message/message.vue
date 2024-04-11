@@ -1,15 +1,7 @@
-/****************************************************************************
-
-所属系统: 组件库
-所属模块: 组件 - 消息提示组件
-
-
-***************************************************************************/
 
 <template>
   <div class="content">
-
-    <h2 class="j-mb-20">消息提示组件</h2>
+    <h2 class="j-mb-20">消息提示</h2>
 
     <!-- 常规按钮高度 -->
     <div class="left">
@@ -33,7 +25,7 @@
 <script>
 export default {
   name: "messageView",
-  label: "message消息提示",
+  label: "消息提示",
   methods: {
     tips(type) {
       switch (type) {
@@ -61,8 +53,3 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.content {
-  padding: 20px 50px;
-}
-</style>

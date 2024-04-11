@@ -8,7 +8,7 @@
 
 <template>
   <span>
-    <!-- 原本内容插槽 -->
+    <!-- 插槽 -->
     <slot></slot>
     <transition name="fade">
       <div class="popover"

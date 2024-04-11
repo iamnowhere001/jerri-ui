@@ -1,25 +1,19 @@
-/****************************************************************************
-所属系统: 组件库 
-所属模块: 组件 - 角标组件 
-
-
-***************************************************************************/
 
 <template>
   <div class="content">
-    <h2 class="j-mb-20">角标组件</h2>
-    
+    <h2 class="j-mb-20">角标</h2>
+
     <div>
       <jr-badge :value="233" class="j-mr-40">
-        <jr-button>红色角标默认最大值为99</jr-button>
+        <jr-button>默认最大值为99</jr-button>
       </jr-badge>
 
       <jr-badge value="hot" type="success" animation="fade" class="j-mr-40">
-        <jr-button plain>绿色角标配置动画</jr-button>
+        <jr-button plain>配置动画</jr-button>
       </jr-badge>
 
       <jr-badge type="warn" value="dad">
-        <jr-button>橙色角标,字符串角标没限制长度</jr-button>
+        <jr-button>字符串角标没限制长度</jr-button>
       </jr-badge>
     </div>
 
@@ -46,14 +40,5 @@
 export default {
   name: "badgeView",
   label: "角标",
-  created() {},
-  mounted() {
-    // console.log(123, this.$utils.isArray([1, 2, 4]));
-  },
-  methods: {
-    deleteBtn() {
-      console.log("删除");
-    },
-  },
 };
 </script>

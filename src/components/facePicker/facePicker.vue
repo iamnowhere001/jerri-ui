@@ -2,11 +2,11 @@
 
 所属系统: 组件库
 所属模块: 表情选择
-创建时间: 2020-01-02
+
 
 ***************************************************************************/
 <template>
-  <div ref="faceContainerRef"
+  <div ref="facePickerRef"
        class="container"
        v-clickoutside="close"
        v-show="show">
@@ -22,7 +22,7 @@
   </div>
 </template>
 <script>
-//  表情字段键值对
+// 表情字段键值对
 import faceData from "../../assets/constants/faceKeyMap";
 
 export default {
@@ -35,7 +35,7 @@ export default {
   },
   watch: {
     show() {
-      this.$refs.faceContainerRef.scrollTop = 0;
+      this.$refs.facePickerRef.scrollTop = 0;
     }
   },
   data() {

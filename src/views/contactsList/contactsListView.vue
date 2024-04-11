@@ -1,7 +1,7 @@
 <template>
   <div class="content">
-    <h2 class="j-mb-20">通讯录组件</h2>
-    
+    <h2 class="j-mb-20">通讯录</h2>
+
     <div>
       <jr-contacts-list
         :isShowPop="isShowPop"

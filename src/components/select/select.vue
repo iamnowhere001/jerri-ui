@@ -1,5 +1,6 @@
 /****************************************************************************
-所属系统: 组件库 所属模块: 下拉选择器 创建时间: 2020-01-02 
+所属系统: 组件库 
+所属模块: 下拉选择器 
 
 ***************************************************************************/
 <template>
@@ -85,7 +86,9 @@ export default {
   },
   props: {
     // 默认的选择项
-    val: { default: "" },
+    val: { 
+      default: "" 
+    },
     // 下拉列表数据
     items: {
       type: Array,
@@ -401,7 +404,7 @@ export default {
     beneath (options, currentPosition) {
       let top =
         document.documentElement.scrollTop ||
-        window.pageYOffset ||
+        window.scrollY ||
         document.body.scrollTop;
       options.style.top =
         options.style.position === "absolute"
@@ -419,7 +422,7 @@ export default {
     onTop (options, currentPosition) {
       let top =
         document.documentElement.scrollTop ||
-        window.pageYOffset ||
+        window.scrollY ||
         document.body.scrollTop;
       options.style.top =
         options.style.position === "absolute"

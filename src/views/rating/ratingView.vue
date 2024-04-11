@@ -35,18 +35,4 @@ export default {
   methods: {}
 };
 </script>
-<style scoped lang='scss'>
-.box {
-  width: 140px;
-}
-.jsx-table {
-  tr {
-    height: 40px;
-  }
-  th,
-  td {
-    height: 40px;
-    border: 1px solid #000;
-  }
-}
-</style>
+

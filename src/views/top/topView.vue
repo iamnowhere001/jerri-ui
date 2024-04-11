@@ -1,15 +1,7 @@
-/****************************************************************************
-
-所属系统: 组件库
-所属模块: 组件 - 回到顶部组件
-
-
-
-***************************************************************************/
 
 <template>
   <div class="content">
-    <h2 class="j-mb-20">回到顶部组件</h2>
+    <h2 class="j-mb-20">回到顶部</h2>
 
     <div>
       <ul>
@@ -25,6 +17,8 @@
       </jr-page>
 
       <jr-top :visibilityHeight="100"></jr-top>
+
+      <jr-button class="j-mb-100" @click="scrollTop">滚动</jr-button>
     </div>
   </div>
 </template>
@@ -46,7 +40,10 @@ export default {
     },
     getPage() {
       this.num = 500;
-    }
+    },
+    scrollTop() {
+      this.$utils.scrollTopAnimate(500);
+    },
   }
 };
 </script>

@@ -15,7 +15,7 @@
 
 ## 工具类添加
 
-1.  新增 `getSource` 方法，用于获取外部依赖资源
+1. 新增 `getSource` 方法，用于获取外部依赖资源
 
 ## button
 
@@ -134,10 +134,10 @@
 
 ## 未参与搬家的旧组件 更新新版组件库需要替换成新查询组件和新表格组件
 
-1.  `headerSearch`
-2.  `table`
-3.  `advancedQuery`
-4.  `waterMark`
+1. `headerSearch`
+2. `table`
+3. `advancedQuery`
+4. `waterMark`
 
 ## 新增组件
 

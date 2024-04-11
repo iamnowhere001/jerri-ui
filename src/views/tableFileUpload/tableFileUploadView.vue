@@ -2,6 +2,7 @@
 <template>
   <div class="j-container">
     <jr-head title='表格文件上传'></jr-head>
+    
     <div class="file-box">
       <jr-table-file-upload v-model="fileList"
                             action='//192.168.99.29:8200/'

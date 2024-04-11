@@ -1,11 +1,7 @@
-/****************************************************************************
-
+/*
 所属系统: 组件库
 所属模块: 标题组件
-创建时间: 2020-01-02
-
-
-***************************************************************************/
+*/
 <template>
   <div class="jr-header">
     {{headTitle}}
@@ -16,7 +12,6 @@
 <script>
 export default {
   name: "JrHead",
-  components: {},
   props: {
     title: {
       type: String
@@ -46,7 +41,7 @@ export default {
   },
   methods: {
     /**
-     * @desc 获取年报数据
+     * @desc 获取标题
      * @param {type}
      * @return:
      * @author ZhengKai

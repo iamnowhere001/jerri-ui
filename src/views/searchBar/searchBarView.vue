@@ -1,6 +1,6 @@
 <template>
   <div class="j-container">
-    <h3 class="j-mb-20">普通的单行查询隐藏搜索按钮</h3>
+    <h3 class="j-mb-20 j-pt-30">普通的单行查询隐藏搜索按钮</h3>
     <jr-search-bar
       :searchList="searchList"
       @click="handleClick"
@@ -8,8 +8,8 @@
       @iconClick="handleIconClick"
     >
     </jr-search-bar>
-    <div class="j-pt-30"></div>
-    <h3 class="j-mb-20">单行查询：后面出现自定义按钮</h3>
+    
+    <h3 class="j-mb-20 j-pt-30">单行查询：后面出现自定义按钮</h3>
     <jr-search-bar :searchList="searchList" @click="handleClick">
       <template #default>
         <div class="j-ml-10">
@@ -17,9 +17,8 @@
         </div>
       </template>
     </jr-search-bar>
-    <div class="j-pt-30"></div>
     
-    <h3 class="j-mb-20">普通的高级查询</h3>
+    <h3 class="j-mb-20 j-pt-30">普通的高级查询</h3>
     <jr-search-bar
       :searchList="searchList1"
       isAdvanced
@@ -34,8 +33,8 @@
         <jr-input></jr-input>
       </template>
     </jr-search-bar>
-    <div class="j-pt-30"></div>
-    <h3 class="j-mb-20">
+
+    <h3 class="j-mb-20 j-pt-30">
       普通的高级查询,无导出按钮，无收起查询条件,无重置按钮
     </h3>
     <jr-search-bar
@@ -48,15 +47,15 @@
         <jr-input></jr-input>
       </template>
     </jr-search-bar>
-    <div class="j-pt-30"></div>
-    <h3 class="j-mb-20">多查询条件,查询按钮不跨行，无导出按钮的情况</h3>
+
+    <h3 class="j-mb-20 j-pt-30">多查询条件,查询按钮不跨行，无导出按钮的情况</h3>
     <jr-search-bar :searchList="searchList3" :interBank="false" isAdvanced>
       <template #acc>
         <jr-input></jr-input>
       </template>
     </jr-search-bar>
-    <div class="j-pt-30"></div>
-    <h3 class="j-mb-20">多查询条件,查询按钮跟随</h3>
+
+    <h3 class="j-mb-20 j-pt-30">多查询条件,查询按钮跟随</h3>
     <jr-search-bar :searchList="searchList3" isBtnFollow isAdvanced>
       <template #acc>
         <jr-input></jr-input>
