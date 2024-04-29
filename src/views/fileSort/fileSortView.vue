@@ -3,7 +3,7 @@
    <h2 class="j-mb-20">文件排序组件</h2>
 
     <jr-button @click="showFileSort = true">打开</jr-button>
-    
+
     <jr-file-sort :files="filesArr"
                   title="文件排序弹窗的标题"
                   :showFileSort.sync="showFileSort"></jr-file-sort>

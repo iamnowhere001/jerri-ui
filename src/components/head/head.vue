@@ -1,7 +1,4 @@
-/*
-所属系统: 组件库
-所属模块: 标题组件
-*/
+
 <template>
   <div class="jr-header">
     {{headTitle}}
